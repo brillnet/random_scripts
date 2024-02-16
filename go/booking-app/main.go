@@ -1,10 +1,9 @@
 package main
 
-//  Left off at 2:37
-
 import (
 	"booking-app/helper"
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -131,6 +130,13 @@ func getUserInput(firstName string, lastName string, email string, userTickets u
 
 func bookTicket(userTickets uint, firstName string, lastName string, email string) ([]string, uint) {
 	remainingTickets = remainingTickets - userTickets
+
+	//  Creating map
+	var userData = make(map[string]string)
+	userData["firstName"] = firstName
+	userData["lastName"] = lastName
+	userData["email"] = email
+	userData["numberOfUserTickets"] = strconv.FormatUint(uint64(userTickets), 10)
 
 	// Appending first and last name of user
 	// to array.
