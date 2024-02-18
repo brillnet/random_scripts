@@ -4,11 +4,11 @@ import (
 	"booking-app/helper"
 	"fmt"
 	"strconv"
-	"strings"
 )
 
 // Creating array of strings
-var bookings []string
+
+var bookings = make([]map[string]string, 0)
 var conferenceName = "Go Conference"
 
 const conferenceTickets = 50
@@ -43,10 +43,10 @@ func main() {
 		if isValidName && isValidEmail && isValidTicketNumber {
 
 			//  Calling function to book ticket for the user.
-			bookings, remainingTickets = bookTicket(userTickets, firstName, lastName, email)
+			remainingTickets = bookTicket(userTickets, firstName, lastName, email)
 
 			// Printing firstNames from list of bookins array
-			firstNames := printFirstNames(bookings)
+			firstNames := printFirstNames()
 
 			//  Printing bookings so far.
 			fmt.Printf("These are all our bookings so far: %v\n", firstNames)
@@ -98,15 +98,15 @@ func greetUsers(conferenceName string, confTickets int) {
 
 // Notice the [] string on the outside of () this designates
 // that this function will return a string.
-func printFirstNames(bookings []string) []string {
+func printFirstNames() []string {
 	var firstNames = []string{}
 	// For loop to iterate through the bookings array.
 	// _ is used as an unused variable.
 	for _, booking := range bookings {
 		// Spliting booking value in to a list of names.
 		// names will look like [greg,smith]
-		var names = strings.Fields(booking)
-		firstNames = append(firstNames, names[0])
+		firstName := booking["firstName"]
+		firstNames = append(firstNames, firstName)
 	}
 	return firstNames
 }
@@ -128,7 +128,7 @@ func getUserInput(firstName string, lastName string, email string, userTickets u
 	return firstName, lastName, email, userTickets
 }
 
-func bookTicket(userTickets uint, firstName string, lastName string, email string) ([]string, uint) {
+func bookTicket(userTickets uint, firstName string, lastName string, email string) uint {
 	remainingTickets = remainingTickets - userTickets
 
 	//  Creating map
@@ -140,11 +140,12 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 
 	// Appending first and last name of user
 	// to array.
-	bookings = append(bookings, firstName+" "+lastName)
+	// bookings = append(bookings, firstName+" "+lastName)
+	bookings = append(bookings, userData)
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will recieve a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("Remaining Tickets: %v\n", remainingTickets)
 
-	return bookings, remainingTickets
+	return remainingTickets
 
 }
