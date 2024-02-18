@@ -13,8 +13,7 @@ type UserData struct {
 }
 
 // Creating empty list of structs. The structs
-// will be in the format of the UserData struct
-// above.
+// will be in the format of the UserData struct above.
 var bookings = make([]UserData, 0)
 var conferenceName = "Go Conference"
 
