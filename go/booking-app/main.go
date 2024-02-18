@@ -1,14 +1,20 @@
 package main
 
 import (
-	"booking-app/helper"
 	"fmt"
-	"strconv"
+	"strings"
 )
 
-// Creating array of strings
+type UserData struct {
+	firstName   string
+	lastName    string
+	email       string
+	userTickets uint
+}
 
-var bookings = make([]map[string]string, 0)
+// Creating empty list of structs. The structs
+// will be in the format of the UserData struct above.
+var bookings = make([]UserData, 0)
 var conferenceName = "Go Conference"
 
 const conferenceTickets = 50
@@ -33,7 +39,7 @@ func main() {
 		firstName, lastName, email, userTickets = getUserInput(firstName, lastName, email, userTickets)
 
 		//  The below function returns multiple bools.
-		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName,
+		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName,
 			lastName,
 			email,
 			userTickets,
@@ -100,13 +106,12 @@ func greetUsers(conferenceName string, confTickets int) {
 // that this function will return a string.
 func printFirstNames() []string {
 	var firstNames = []string{}
-	// For loop to iterate through the bookings array.
+	//  For loop to iterate through the bookings array.
 	// _ is used as an unused variable.
 	for _, booking := range bookings {
-		// Spliting booking value in to a list of names.
-		// names will look like [greg,smith]
-		firstName := booking["firstName"]
-		firstNames = append(firstNames, firstName)
+		//  Filling firstNames list with list of firstNames
+		// contained in the bookings list of structs.
+		firstNames = append(firstNames, booking.firstName)
 	}
 	return firstNames
 }
@@ -131,16 +136,16 @@ func getUserInput(firstName string, lastName string, email string, userTickets u
 func bookTicket(userTickets uint, firstName string, lastName string, email string) uint {
 	remainingTickets = remainingTickets - userTickets
 
-	//  Creating map
-	var userData = make(map[string]string)
-	userData["firstName"] = firstName
-	userData["lastName"] = lastName
-	userData["email"] = email
-	userData["numberOfUserTickets"] = strconv.FormatUint(uint64(userTickets), 10)
+	//  Filling struct with user data.
+	var userData = UserData{
+		firstName:   firstName,
+		lastName:    lastName,
+		email:       email,
+		userTickets: userTickets,
+	}
 
 	// Appending first and last name of user
 	// to array.
-	// bookings = append(bookings, firstName+" "+lastName)
 	bookings = append(bookings, userData)
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will recieve a confirmation email at %v\n", firstName, lastName, userTickets, email)
@@ -148,4 +153,17 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 
 	return remainingTickets
 
+}
+
+func validateUserInput(firstName string,
+	lastName string,
+	email string,
+	userTickets uint,
+	remainingTickets uint) (bool, bool, bool) {
+	// Assigning bool values to variables.
+	isValidName := len(firstName) >= 2 && len(lastName) >= 2
+	isValidEmail := strings.Contains(email, "@")
+	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets
+
+	return isValidName, isValidEmail, isValidTicketNumber
 }
