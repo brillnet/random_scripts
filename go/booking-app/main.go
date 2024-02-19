@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"time"
 )
 
 type UserData struct {
@@ -50,6 +51,9 @@ func main() {
 
 			//  Calling function to book ticket for the user.
 			remainingTickets = bookTicket(userTickets, firstName, lastName, email)
+
+			//  Sending tickets to user email address in different thread.
+			go sendTicket(userTickets, firstName, lastName, email)
 
 			// Printing firstNames from list of bookins array
 			firstNames := printFirstNames()
@@ -166,4 +170,12 @@ func validateUserInput(firstName string,
 	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets
 
 	return isValidName, isValidEmail, isValidTicketNumber
+}
+
+func sendTicket(userTickets uint, firstName string, lastName string, emailAddress string) {
+	time.Sleep(10 * time.Second)
+	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
+	fmt.Println("###################")
+	fmt.Printf("Sending ticket \n %v to email address %v\n", ticket, email)
+	fmt.Println("###################")
 }
