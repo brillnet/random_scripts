@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -25,6 +26,8 @@ var firstName string
 var lastName string
 var email string
 var userTickets uint
+
+var wg = sync.WaitGroup{}
 
 func main() {
 
@@ -51,6 +54,12 @@ func main() {
 
 			//  Calling function to book ticket for the user.
 			remainingTickets = bookTicket(userTickets, firstName, lastName, email)
+
+			//  Adding 1 to wait group. This function
+			//  adds a number of threads the main thread
+			//  should wait for to complete before creating
+			//  a new thread.
+			wg.Add(1)
 
 			//  Sending tickets to user email address in different thread.
 			go sendTicket(userTickets, firstName, lastName, email)
@@ -80,6 +89,11 @@ func main() {
 				fmt.Println("Invalid number of tickets. Please try again.")
 			}
 		}
+
+		//  Waits until all threads containing the sendTickets
+		//  function have exited before exiting main thread.
+		wg.Wait()
+
 	}
 
 	city := "London"
@@ -173,9 +187,11 @@ func validateUserInput(firstName string,
 }
 
 func sendTicket(userTickets uint, firstName string, lastName string, emailAddress string) {
-	time.Sleep(10 * time.Second)
+	time.Sleep(50 * time.Second)
 	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
 	fmt.Println("###################")
 	fmt.Printf("Sending ticket \n %v to email address %v\n", ticket, email)
 	fmt.Println("###################")
+	// Removes thread from weight group when it is done executing.
+	wg.Done()
 }
