@@ -1,0 +1,827 @@
+<?xml version="1.0"?>
+<config version="11.0.0" urldb="paloaltonetworks" detail-version="11.0.1">
+  <mgt-config>
+    <users>
+      <entry name="admin">
+        <phash>$1$qslvqvri$IZOos0O.e1K98WSTyCagh0</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+      </entry>
+      <entry name="fuel">
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+        <phash>$1$ajaulvno$DuKmCT.pW7opHPuuoFeRt/</phash>
+      </entry>
+    </users>
+    <password-complexity>
+      <enabled>yes</enabled>
+      <minimum-length>8</minimum-length>
+    </password-complexity>
+  </mgt-config>
+  <shared>
+    <application/>
+    <application-group/>
+    <service/>
+    <service-group/>
+    <botnet>
+      <configuration>
+        <http>
+          <dynamic-dns>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </dynamic-dns>
+          <malware-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </malware-sites>
+          <recent-domains>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </recent-domains>
+          <ip-domains>
+            <enabled>yes</enabled>
+            <threshold>10</threshold>
+          </ip-domains>
+          <executables-from-unknown-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </executables-from-unknown-sites>
+        </http>
+        <other-applications>
+          <irc>yes</irc>
+        </other-applications>
+        <unknown-applications>
+          <unknown-tcp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-tcp>
+          <unknown-udp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-udp>
+        </unknown-applications>
+      </configuration>
+      <report>
+        <topn>100</topn>
+        <scheduled>yes</scheduled>
+      </report>
+    </botnet>
+    <certificate>
+      <entry name="firewall">
+        <common-name>firewall.lab.com</common-name>
+        <subject>subject=O = Org Allowed to Resign, OU = Org Allowed to Resign, CN = firewall.lab.com</subject>
+        <algorithm>RSA</algorithm>
+        <private-key>-AQ==FIXwiFZpG9qghNtb/jJEDBHFfHU=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</private-key>
+        <subject-hash>66378906</subject-hash>
+        <issuer-hash>7d973ccc</issuer-hash>
+        <not-valid-before>Feb  2 16:04:48 2024 GMT</not-valid-before>
+        <issuer>issuer=C = US, ST = New York, L = Albany, O = GregsChainsaws, CN = gregsplace.com, emailAddress = greg@google.com</issuer>
+        <not-valid-after>Feb  1 16:04:48 2025 GMT</not-valid-after>
+        <expiry-epoch>1738425888</expiry-epoch>
+        <ca>no</ca>
+        <public-key>-----BEGIN CERTIFICATE-----
+MIIE1jCCAr6gAwIBAgICEjYwDQYJKoZIhvcNAQELBQAwgYMxCzAJBgNVBAYTAlVT
+MREwDwYDVQQIDAhOZXcgWW9yazEPMA0GA1UEBwwGQWxiYW55MRcwFQYDVQQKDA5H
+cmVnc0NoYWluc2F3czEXMBUGA1UEAwwOZ3JlZ3NwbGFjZS5jb20xHjAcBgkqhkiG
+9w0BCQEWD2dyZWdAZ29vZ2xlLmNvbTAeFw0yNDAyMDIxNjA0NDhaFw0yNTAyMDEx
+NjA0NDhaMFsxHjAcBgNVBAoMFU9yZyBBbGxvd2VkIHRvIFJlc2lnbjEeMBwGA1UE
+CwwVT3JnIEFsbG93ZWQgdG8gUmVzaWduMRkwFwYDVQQDDBBmaXJld2FsbC5sYWIu
+Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7qhWmnVpT/k35e7G
+VqGsvuGuyhEWDriRjy1Lv4Zdz2Syia1NLk828UWkmXXqvvhRqxUtLN+8BaSQHZtZ
+8WYDYAdWQtHNEBGvENzPOOgZ0lS6wvd0ewoRM4EfG1RRbLlYR41E2s0QaLfQjwgG
+TbTkYm4ArlciszuvmGfGh8BiEcCXzTw6nFYgsJ4Nv5oHQAfZllKYICy7Il5focBf
+hEzPO/0rk1VODlZrF44EDCMwFHa0YjvUOdoQsdflrvZsgQAtoTa60DNcvP9/GLdz
+Gs61OWEm2xJgl9OKQOYlL4uzuz6YfguZdYm+JAwo8rf2RAx9VGxAgXMCCbFW+z7N
+X/Q0KwIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NM
+IEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUEJyCQPugiLHnXhwS7ja5
+Wf9xWekwHwYDVR0jBBgwFoAUg189IPOjefx9ChTrNQAewf6pGjgwDQYJKoZIhvcN
+AQELBQADggIBAFtcIpOdBLW2pbk0r7KkXcwCs9oojetQZGPhKYTkTUS9KiVvtiKw
+0p/s/VvIHob0n84HLO3CRx/KaQ3TYLTNsoVw+IL/bg6PdDhuL+fo5At2qbKP2J69
+yMdVhIuSj4FDmRal0e/SsJr7LuzGV9C3Rz8O9N347AjdooEDGvAJ6x27J42FdMlM
+94c1Ek/l3PpAghP2TB7upwKrQfxEQ12d+5IOKkgFNbQRi5JYp/aGcbyXldUdNCnB
++HUbZ5wBMDc7OawtkZO2bDW7Zuco6K+JBg3o8It6hlIV2BOe5w2bsLxBUZ9ZWd8K
+PTEfOwlq7ZbQyDEmQ9QGndJCK8ZSkkhXIWOZyxNmVL4vj+BNsgVGJ1HTR9+Nkpa+
+8Ohfug5csslP5WC/E8YlfS4vwOodHXAg7LYujvVsd9JG4XgrQHFY7rJMv2qmMxEB
+vXPsT7V7SZwu+mLrIgjBuRDhiJMPAbQBM0MHvi/lNLE7HDRgjtbM/qqf81MM2seh
+dXlY+29zRBf3oeIbN6CoH1lPfRga4OiPPskxiC+kRmgvBeGSEaVCuKDOtOPMQ/co
+1Vq+cyW3QQBTpPDYQco/RxCT1BKXJQr9SVOPZ+Ajf6vop3dJ7wRR+eCKsOVUT5Kg
+/HizCDfl8Xo4OntVEmv1WDsEeQxP/32xbhVpZwi+va97A4yW9Pu3gbX9
+-----END CERTIFICATE-----
+</public-key>
+      </entry>
+      <entry name="Trusted_Local_Win_CA">
+        <subject-hash>7d973ccc</subject-hash>
+        <issuer-hash>7d973ccc</issuer-hash>
+        <not-valid-before>Feb  1 17:11:54 2024 GMT</not-valid-before>
+        <issuer>issuer=C = US, ST = New York, L = Albany, O = GregsChainsaws, CN = gregsplace.com, emailAddress = greg@google.com</issuer>
+        <not-valid-after>Jan 29 17:11:54 2034 GMT</not-valid-after>
+        <common-name>gregsplace.com, emailAddress = greg@google.com</common-name>
+        <expiry-epoch>2022167514</expiry-epoch>
+        <ca>yes</ca>
+        <subject>subject=C = US, ST = New York, L = Albany, O = GregsChainsaws, CN = gregsplace.com, emailAddress = greg@google.com</subject>
+        <public-key>-----BEGIN CERTIFICATE-----
+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
+-----END CERTIFICATE-----
+</public-key>
+        <algorithm>RSA</algorithm>
+      </entry>
+      <entry name="Cert_For_Re-Signing">
+        <common-name>resign.ogit.local</common-name>
+        <subject>subject=O = Org Allowed to Resign, OU = Org Allowed to Resign, CN = resign.ogit.local</subject>
+        <algorithm>RSA</algorithm>
+        <private-key>-AQ==W1mDvlPumh/LXPp7lFaKCeuS6eU=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</private-key>
+        <subject-hash>1a7a39fd</subject-hash>
+        <issuer-hash>7d973ccc</issuer-hash>
+        <not-valid-before>Feb  2 19:00:07 2024 GMT</not-valid-before>
+        <issuer>issuer=C = US, ST = New York, L = Albany, O = GregsChainsaws, CN = gregsplace.com, emailAddress = greg@google.com</issuer>
+        <not-valid-after>Feb  1 19:00:07 2025 GMT</not-valid-after>
+        <expiry-epoch>1738436407</expiry-epoch>
+        <ca>yes</ca>
+        <public-key>-----BEGIN CERTIFICATE-----
+MIIE9jCCAt6gAwIBAgIUHm5RDzAIeFgAQvPLWRk6diQxYUkwDQYJKoZIhvcNAQEL
+BQAwgYMxCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhOZXcgWW9yazEPMA0GA1UEBwwG
+QWxiYW55MRcwFQYDVQQKDA5HcmVnc0NoYWluc2F3czEXMBUGA1UEAwwOZ3JlZ3Nw
+bGFjZS5jb20xHjAcBgkqhkiG9w0BCQEWD2dyZWdAZ29vZ2xlLmNvbTAeFw0yNDAy
+MDIxOTAwMDdaFw0yNTAyMDExOTAwMDdaMFwxHjAcBgNVBAoMFU9yZyBBbGxvd2Vk
+IHRvIFJlc2lnbjEeMBwGA1UECwwVT3JnIEFsbG93ZWQgdG8gUmVzaWduMRowGAYD
+VQQDDBFyZXNpZ24ub2dpdC5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAOKGAHhXdETbGwi8cf6MEwE5pqMWrsIR+dCG7iHmQvl0DwujW4+okyOS
+mZ0XsHdjctNADcSj3bLS/Ps5E23UILDn/cMprgRwY2r+Ote4S5y3pk2IR1FnWdxB
+T+Bq2jt6TQB8UR324zg/DZIprv+UaA+6dGXAx4G5VPZ0R2bDVkp5FDeHVO5YSUut
+DE68C3apPpSuxuy9Q0M7tlEtBvIO6IXutvt+cSBAnY6jamQW7S2XAAdiwoZmHz4l
+dlDqa8KUDMPnUm9hzmu9SSd6qaPdBHjL+Zqi/a/R6z51xqzFIydX2EX0q9nfFGCZ
+BHN+Gg+pEcne4v4Cmi7cY75KFVT4eXECAwEAAaOBhzCBhDAdBgNVHQ4EFgQUwAwe
+6OrKgYGZM7BWj+FKWU7pptowHwYDVR0jBBgwFoAUg189IPOjefx9ChTrNQAewf6p
+GjgwDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAQYwEQYJYIZIAYb4QgEBBAQDAgEG
+MAkGA1UdEQQCMAAwCQYDVR0SBAIwADANBgkqhkiG9w0BAQsFAAOCAgEAT9tjwzWF
+rLnIHTMcBUz6zLXnDv9ZuKAkkL2chnzfAGmSuiYuv98DoO9mbmpJxG+LdYYBXoI/
+dBY20Gth6AXs9gtbKLj3dMo7U0GX4KDXpjI3czx+7QeIsfpKct2luxgntuYB5SMl
+Z/+qpHNzQKHuxRR1noPsR/vtgTIQUqHb7ZOBP4pbDZzzwWYG8MyRySYwAJFYXttE
+PlA2WDxfmmFHid0okC8wr89zKMdJmR6r11Z9Zd0G7Tp3pbfkiZFaJHE9++tV86X6
+B702hV4fik4kxJlZCxUoo+yd2ykLo93KgymAUh85B0cPtj9vGYh0JfY+KMJMjUpp
+CyQnYfPecBW6Ls/jAczc03mjsmuC04GZJnfaek7lvtvH6iCNoBFmsdVVWtGt9Oso
+NHD2ikwKu/cEMLRDIEWg54Lgd53YGCqeOalakeLLjDB/Pz3DvAJnmvxNKzzY9IiA
+usWrRKaE7IQ6kXFjbibB377H7mMXiHCEjS6uOq6CnYXQkn/idOa5kgR/bOFtojAI
+LtR5h/GqLILTtkyByZg2Do1j9y7Pj/mBncrLU96WjTeYjaLeAFzL9CUg6O4WKx+F
+Q9KSPstJOGTsOGOJfSEPCU1M1yC5GjNiR3Gy/LUyKBqhwQqxbw1FGATL+71sknyH
+mUJz90h99pEWImMGJ8W9UV+GsCrAik4dyaI=
+-----END CERTIFICATE-----
+</public-key>
+      </entry>
+      <entry name="webserver">
+        <subject-hash>43798caa</subject-hash>
+        <issuer-hash>7d973ccc</issuer-hash>
+        <not-valid-before>Feb  1 17:55:40 2024 GMT</not-valid-before>
+        <issuer>issuer=C = US, ST = New York, L = Albany, O = GregsChainsaws, CN = gregsplace.com, emailAddress = greg@google.com</issuer>
+        <not-valid-after>Jan 31 17:55:40 2025 GMT</not-valid-after>
+        <common-name>travelers.com, emailAddress = tommy@travelers.com</common-name>
+        <expiry-epoch>1738346140</expiry-epoch>
+        <ca>no</ca>
+        <subject>subject=C = US, ST = Connecticut, O = Travelers, CN = travelers.com, emailAddress = tommy@travelers.com</subject>
+        <public-key>-----BEGIN CERTIFICATE-----
+MIIE7jCCAtagAwIBAgICEjUwDQYJKoZIhvcNAQELBQAwgYMxCzAJBgNVBAYTAlVT
+MREwDwYDVQQIDAhOZXcgWW9yazEPMA0GA1UEBwwGQWxiYW55MRcwFQYDVQQKDA5H
+cmVnc0NoYWluc2F3czEXMBUGA1UEAwwOZ3JlZ3NwbGFjZS5jb20xHjAcBgkqhkiG
+9w0BCQEWD2dyZWdAZ29vZ2xlLmNvbTAeFw0yNDAyMDExNzU1NDBaFw0yNTAxMzEx
+NzU1NDBaMHMxCzAJBgNVBAYTAlVTMRQwEgYDVQQIDAtDb25uZWN0aWN1dDESMBAG
+A1UECgwJVHJhdmVsZXJzMRYwFAYDVQQDDA10cmF2ZWxlcnMuY29tMSIwIAYJKoZI
+hvcNAQkBFhN0b21teUB0cmF2ZWxlcnMuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAvmJDxDyqeM7epZTcMzNJjlHfSOpM2T69L8aSXGp8YbslXzVl
+DQ5aEya3/WXEqbQuCV7NJvs+dyNT8vV3689tMnwIh+HAdGgp3Qx6YT0l7dGuDa5/
+Mqn4tetZ/zCW/3k20Jy7UI3st1hXRY1GPq6mPngroYw5HlxQ0EwV0lY8PcmkgaGK
+f03WJmCTJPXkgBr3DeRPH2M4tX+Ka9hBb6XAgkGlTBFagNs00KdgFg8YsKhaMWp1
+84qtQoHYwbqIXbLgMpO/TLg3kP6E1XVjye3gzSlzDXQtJqqfqGa5Oo7jRX1pKFhY
+DQr2jnbDQCzFHG1fzUm12QAzDrJIj0GSjKN70QIDAQABo3sweTAJBgNVHRMEAjAA
+MCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAd
+BgNVHQ4EFgQUTsPQrZiD4OoPImO1pS0lIZgK8+0wHwYDVR0jBBgwFoAUg189IPOj
+efx9ChTrNQAewf6pGjgwDQYJKoZIhvcNAQELBQADggIBAJoTm7NCPDpsoPlE0I5i
+RVk/++wtKEfF+wWOG1Hnp+a1i1TDvQUXNG8HNSug8H059kSrJU2zBzV+u/5pvWoV
+J5fZYCbRZts1o/PAVrzu451Abng8SVHnDeVXhQ9QR0UgSeB+5G322gh5zNh0W8wd
+BfzO+CEEeNQeCxgw1mwLhsQMZIWtW4A6WwVkWKctRRhTt1cGuVt4QNuAMxKuE3ax
+YGWZAFIsExpEChkhOZcHZ04VZJJ3dv2lI7xMIowdte6Q/pj8Msz6AweNJ5qa9/mQ
+8Ur/eUpQ8f45TCeqfM0uzSQjwiQYBtJa8J0IzyOBmVUHZSj99jY+4MotsCVwLgBE
+rS8B/wDu3l3sAle7edNsq5C3xip2skaGnzdmvRvCip1y+GLFy6VBz/UxeN+/eFqh
+LV5nrtO+HncEAO3NMpS6rPeGui02S/YzHFpUAu78U3UGbgMSZO8+CiOFI9LplLhU
+lvnZf1JSqBHxElxQH3abtTA7l7p/qbEPDT4bmj3aKAcgQ7K/lpCc6q22GGX3asvl
+p9QUQlkzBp2MP1+78fMSakDDWNluNVkYPs9c3CzIixqPENPuGMRQzSTDIUvgWcrh
+YmiXsy0LaAIWI5K3T8Y2lXwq6/Tb+eMnRvdN0AdZaps7qC3bXoxBwQYU57cVyERT
++G28wWX+SxcneEUnUBzBiwtt
+-----END CERTIFICATE-----
+</public-key>
+        <algorithm>RSA</algorithm>
+        <private-key>-AQ==InKPLfxyN6Y09Fj+usbKUf4FUpc=wfL5Zc+wUAak+B7CnAVY6NdutYWtt67XvF+yGHFGS+vmQugtSrA952XGaQ20AVyRvYQqfZftS2wTRzax68oxlkw2GlZmnc8tVnalTLfW+BU7OoGtBv5rp4sLeYOUUaIczE+4C03b2EDcELob9BUSZNKhGlwkDJ98n74fpurIPdMXEhxbKveemC11V66k748y5x9lHf/GX+zyQI436DNXjS7SY3E7dAq/Ac64a+k7zlGRVd2K8jTO5D4WdLniZ9EjsyFysNDdBjndhgYFbsqYstSgds+9PS4L8I5n3o73GD3sWIBz1GySbX4UnWj/qfVqsBU0ltas9MArrbshU9rQt0BJ6GzwgjwlpTZeFlnyRx+U5cRiiGoVBRdCNFL9cjNVfukjaE5pIsIvgU2bK82UF46fID0CZm6EmtKMgXuSTdEI6pQ2e1EGzV3ZPMIqbvwnGaOZ3WMeW7JzHb80iL+upsyllsTR7y+nHw0ko0hsgr8JTl6daOgqXVUY5oHppNpDgnSb6lUmuUw+8BOBiWFOSIJ69XFy0HK8oy7qba0qsdxY2ci593lwdh1UduaJAX5aCz0lMOwzMeftP1pAnke8NwE2cAcYQuX0DUopkhLK5OKezF8Dsn2wAvUbLZBAbeuqd8BLMO3pM94ZM1cv/lYXDseJpJtYExXnXGwymFse8iEEeLI5g1YMyov/VymUkXbOJKjq+MVerM7kS//0u0BJZXdZNZKlTQVgill9wh6fyCy4QB0c+YEu7Dn/ZoJj3Ub08nJRcwwKZ/T8IEebhcGaNLVd+XSLFGHoXsjR6pTOBLM3Q770GdxqIoJ0oiOOdEOgMglAQMM7eLjLP3oLJTaNb1ABG8W09GczwKobtdbVB6FCaA7OROVFS/ZeY1xaE83GobKaoQoheVBYPGw5YfnAjV3L+fIbazyUdMKHnQ/emxvXVp1DdO+BMSUGskVHP8SAVTIyX2eQTes6RK/FWRv9LIqN1YhanzvSBMM9fqRI6OasZgKBkfTUOLDmMRfOJW2MGLqyaA0IK5YTLTqfDewTHE6TXCJM2Be1e7qRkjby8pMUvoeeyqzVksVQ3qG29jBDEe5lnRx/IUrae/VMvTsRtU7dw1OUV/XpsdxcVxG6gEIkmN8VPB46SASWRJGWHuckUx7+zmX3ESwQKQJTA2eUUgxFGsRQX6muFITidrfqxwF0Cz67/hpKT+TlhD+LqrP6HCgwVvzJ4hPOBp7hhW6i6QuPtSPBt0Pkw4oaw33HNgiKvV4MiFNvGI2aAaddsnFN/pqRmTi8MKrKON0Uw7QaUnV9q7W+zeA2f59U5oUlVpjlaKyX6SCM6sgfyfbfsNAkCnWHoadGDQTZTRlZQZQsrzfA4iKQkfJQJOo0znL0k73W0Gi0ePXD/CFtQ2JmmPlcHJ1ImijugBCe8nEu2lk1xOt5T4+KasvZLl021XIJkwdDPKRLPTC3yds00odj3fqbAyACjva8jp4yARC5U9XbVbxfXEbv2F8FmPLgEMbzmN1svpuJfxsT5nrP0tgCJIZmcf9KdL74GSLSxC7XsKqTz/3yQAkNhvacl7qQtVXT4Il+pefcXwYoddKrD8slW4WHQdU+ki4FpSkevRX0K51Q09dYVlJyIElv5v3qYn9JrFinyesdU5i+muh7WoW4ufwYy1PV50CLJCV9o+N3cSA4Jq5w1jrQLuscc+C77Pzr3MyQnWh6wYO/9HpXEd3kiD5lG/4wU/6ZxQ9gbQz3kQVXSgDQpTBiQGIQsrrXH+SPenGGLKY3Yfm0zL0xxXocZGB9iLPTCyQ9hWrm/c4aRbp4HR+qy2iXC8OoRY3dcRjCHuA1eapn4QPCL4eyDFV2Yw15Gahoja2ZT+5+0ABdahbW3Yry99DYIvsaRntqO3rpTz/5bvFB9THmq2x8f4mahApcKApe7+FQ2T18c/W+EE4P0x71PgX3OeWdscHFm4/l9HEQvYC9YyU+3T3gGGfyiK/RxRrj1nEPb2lpJy0nqBE4cEz/cj81s6s0wzBTNcRYQVo3uCT1bak1D4ctWBC/CUwXT3VkWotycpyfVIBz+hR9mq4GD7H1zenrT1caXvAEth4Li931Q2DMpTpAH7KTW/ka3ax1G9dvpH3icWBwK7r1/wq5i/f2GXYCBlKO5fFMqcPM7+G2Eu7cHBjPzykPrL8Vr2kOVj7/Qrx1TiuqHUZ/KH8AcR3dl+FrVo75E7ymTldoukmjeBzEeqyBlrV2TTi7</private-key>
+      </entry>
+    </certificate>
+    <ssl-tls-service-profile>
+      <entry name="TLS_Profile_for_Mgmt">
+        <protocol-settings>
+          <min-version>tls1-0</min-version>
+          <max-version>max</max-version>
+        </protocol-settings>
+        <certificate>firewall</certificate>
+      </entry>
+    </ssl-tls-service-profile>
+  </shared>
+  <devices>
+    <entry name="localhost.localdomain">
+      <network>
+        <interface>
+          <ethernet>
+            <entry name="ethernet1/1">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <sdwan-link-settings>
+                  <upstream-nat>
+                    <enable>no</enable>
+                    <static-ip/>
+                  </upstream-nat>
+                  <enable>no</enable>
+                </sdwan-link-settings>
+                <ip>
+                  <entry name="172.16.1.1/24"/>
+                </ip>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+              </layer3>
+              <link-state>auto</link-state>
+            </entry>
+            <entry name="ethernet1/2">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <sdwan-link-settings>
+                  <upstream-nat>
+                    <enable>no</enable>
+                    <static-ip/>
+                  </upstream-nat>
+                  <enable>no</enable>
+                </sdwan-link-settings>
+                <ip>
+                  <entry name="192.168.11.1/24"/>
+                </ip>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+                <interface-management-profile>icmp_profile</interface-management-profile>
+              </layer3>
+            </entry>
+            <entry name="ethernet1/3">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <sdwan-link-settings>
+                  <upstream-nat>
+                    <enable>no</enable>
+                    <static-ip/>
+                  </upstream-nat>
+                  <enable>no</enable>
+                </sdwan-link-settings>
+                <ip>
+                  <entry name="10.80.1.1/24"/>
+                </ip>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+              </layer3>
+            </entry>
+          </ethernet>
+        </interface>
+        <profiles>
+          <monitor-profile>
+            <entry name="default">
+              <interval>3</interval>
+              <threshold>5</threshold>
+              <action>wait-recover</action>
+            </entry>
+          </monitor-profile>
+          <interface-management-profile>
+            <entry name="icmp_profile">
+              <permitted-ip>
+                <entry name="192.168.11.0/24"/>
+              </permitted-ip>
+              <ping>yes</ping>
+            </entry>
+          </interface-management-profile>
+        </profiles>
+        <ike>
+          <crypto-profiles>
+            <ike-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                  <member>3des</member>
+                </encryption>
+                <hash>
+                  <member>sha1</member>
+                </hash>
+                <dh-group>
+                  <member>group2</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha256</member>
+                </hash>
+                <dh-group>
+                  <member>group19</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <encryption>
+                  <member>aes-256-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha384</member>
+                </hash>
+                <dh-group>
+                  <member>group20</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+            </ike-crypto-profiles>
+            <ipsec-crypto-profiles>
+              <entry name="default">
+                <esp>
+                  <encryption>
+                    <member>aes-128-cbc</member>
+                    <member>3des</member>
+                  </encryption>
+                  <authentication>
+                    <member>sha1</member>
+                  </authentication>
+                </esp>
+                <dh-group>group2</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <esp>
+                  <encryption>
+                    <member>aes-128-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group19</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <esp>
+                  <encryption>
+                    <member>aes-256-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group20</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+            </ipsec-crypto-profiles>
+            <global-protect-app-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <authentication>
+                  <member>sha1</member>
+                </authentication>
+              </entry>
+            </global-protect-app-crypto-profiles>
+          </crypto-profiles>
+        </ike>
+        <qos>
+          <profile>
+            <entry name="default">
+              <class-bandwidth-type>
+                <mbps>
+                  <class>
+                    <entry name="class1">
+                      <priority>real-time</priority>
+                    </entry>
+                    <entry name="class2">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class3">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class4">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class5">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class6">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class7">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class8">
+                      <priority>low</priority>
+                    </entry>
+                  </class>
+                </mbps>
+              </class-bandwidth-type>
+            </entry>
+          </profile>
+        </qos>
+        <virtual-router>
+          <entry name="default">
+            <protocol>
+              <bgp>
+                <enable>no</enable>
+                <dampening-profile>
+                  <entry name="default">
+                    <cutoff>1.25</cutoff>
+                    <reuse>0.5</reuse>
+                    <max-hold-time>900</max-hold-time>
+                    <decay-half-life-reachable>300</decay-half-life-reachable>
+                    <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                    <enable>yes</enable>
+                  </entry>
+                </dampening-profile>
+                <routing-options>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                  </graceful-restart>
+                </routing-options>
+              </bgp>
+              <rip>
+                <enable>no</enable>
+              </rip>
+              <ospf>
+                <enable>no</enable>
+              </ospf>
+              <ospfv3>
+                <enable>no</enable>
+              </ospfv3>
+            </protocol>
+            <interface>
+              <member>ethernet1/1</member>
+              <member>ethernet1/2</member>
+              <member>ethernet1/3</member>
+            </interface>
+            <ecmp>
+              <algorithm>
+                <ip-modulo/>
+              </algorithm>
+            </ecmp>
+            <routing-table>
+              <ip>
+                <static-route>
+                  <entry name="Default Route">
+                    <nexthop>
+                      <ip-address>172.16.1.254</ip-address>
+                    </nexthop>
+                    <bfd>
+                      <profile>None</profile>
+                    </bfd>
+                    <interface>ethernet1/1</interface>
+                    <metric>10</metric>
+                    <destination>0.0.0.0/0</destination>
+                    <route-table>
+                      <unicast/>
+                    </route-table>
+                  </entry>
+                </static-route>
+              </ip>
+            </routing-table>
+          </entry>
+        </virtual-router>
+      </network>
+      <deviceconfig>
+        <system>
+          <type>
+            <static/>
+          </type>
+          <update-server>updates.paloaltonetworks.com</update-server>
+          <update-schedule>
+            <threats>
+              <recurring>
+                <weekly>
+                  <day-of-week>wednesday</day-of-week>
+                  <at>01:02</at>
+                  <action>download-only</action>
+                </weekly>
+              </recurring>
+            </threats>
+          </update-schedule>
+          <timezone>US/Pacific</timezone>
+          <service>
+            <disable-telnet>yes</disable-telnet>
+            <disable-http>yes</disable-http>
+          </service>
+          <hostname>PA-VM</hostname>
+          <ip-address>10.30.11.11</ip-address>
+          <netmask>255.255.255.0</netmask>
+          <default-gateway>10.30.11.254</default-gateway>
+          <dns-setting>
+            <servers>
+              <primary>8.8.8.8</primary>
+              <secondary>4.2.2.2</secondary>
+            </servers>
+          </dns-setting>
+          <device-telemetry>
+            <device-health-performance>yes</device-health-performance>
+            <product-usage>yes</product-usage>
+            <threat-prevention>yes</threat-prevention>
+            <region>Americas</region>
+          </device-telemetry>
+          <ssl-tls-service-profile>TLS_Profile_for_Mgmt</ssl-tls-service-profile>
+        </system>
+        <setting>
+          <config>
+            <rematch>yes</rematch>
+          </config>
+          <management>
+            <hostname-type-in-syslog>FQDN</hostname-type-in-syslog>
+          </management>
+          <auto-mac-detect>yes</auto-mac-detect>
+        </setting>
+      </deviceconfig>
+      <vsys>
+        <entry name="vsys1">
+          <application/>
+          <application-group/>
+          <zone>
+            <entry name="L3-Untrust">
+              <network>
+                <layer3>
+                  <member>ethernet1/1</member>
+                </layer3>
+              </network>
+            </entry>
+            <entry name="L3-Trust">
+              <network>
+                <layer3>
+                  <member>ethernet1/2</member>
+                </layer3>
+              </network>
+            </entry>
+            <entry name="L3-Intranet">
+              <network>
+                <layer3>
+                  <member>ethernet1/3</member>
+                </layer3>
+              </network>
+            </entry>
+          </zone>
+          <service/>
+          <service-group/>
+          <schedule/>
+          <rulebase>
+            <nat>
+              <rules>
+                <entry name="SNAT-In-to-out" uuid="dc2ea577-3a00-4db0-b72f-84993dae2fd9">
+                  <to>
+                    <member>L3-Untrust</member>
+                  </to>
+                  <from>
+                    <member>L3-Trust</member>
+                  </from>
+                  <source>
+                    <member>Internal_Subnets</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <service>any</service>
+                  <to-interface>ethernet1/1</to-interface>
+                  <source-translation>
+                    <dynamic-ip-and-port>
+                      <interface-address>
+                        <ip>172.16.1.1/24</ip>
+                        <interface>ethernet1/1</interface>
+                      </interface-address>
+                    </dynamic-ip-and-port>
+                  </source-translation>
+                </entry>
+                <entry name="L3-Trust NAT to L3-Untrust" uuid="bf0282b0-7f2b-49b6-a940-c0a0df4d4d75">
+                  <source-translation>
+                    <dynamic-ip-and-port>
+                      <interface-address>
+                        <ip>172.16.1.1/24</ip>
+                        <interface>ethernet1/1</interface>
+                      </interface-address>
+                    </dynamic-ip-and-port>
+                  </source-translation>
+                  <to>
+                    <member>L3-Untrust</member>
+                  </to>
+                  <from>
+                    <member>L3-Trust</member>
+                  </from>
+                  <source>
+                    <member>any</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <service>any</service>
+                  <to-interface>ethernet1/1</to-interface>
+                  <disabled>yes</disabled>
+                </entry>
+                <entry name="L3-Intranet NAT to L3-Untrust" uuid="79e6afc7-84ec-41f0-aebf-e5ff34c16008">
+                  <source-translation>
+                    <dynamic-ip-and-port>
+                      <interface-address>
+                        <ip>172.16.1.1/24</ip>
+                        <interface>ethernet1/1</interface>
+                      </interface-address>
+                    </dynamic-ip-and-port>
+                  </source-translation>
+                  <to>
+                    <member>L3-Untrust</member>
+                  </to>
+                  <from>
+                    <member>L3-Intranet</member>
+                  </from>
+                  <source>
+                    <member>any</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <service>any</service>
+                  <to-interface>ethernet1/1</to-interface>
+                  <disabled>yes</disabled>
+                </entry>
+              </rules>
+            </nat>
+            <security>
+              <rules>
+                <entry name="In-2-OUT" uuid="b63b0c33-c795-4e81-b540-dab71caecfc4">
+                  <to>
+                    <member>L3-Untrust</member>
+                  </to>
+                  <from>
+                    <member>L3-Trust</member>
+                  </from>
+                  <source>
+                    <member>Internal_Subnets</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <source-user>
+                    <member>any</member>
+                  </source-user>
+                  <category>
+                    <member>any</member>
+                  </category>
+                  <application>
+                    <member>any</member>
+                  </application>
+                  <service>
+                    <member>application-default</member>
+                  </service>
+                  <source-hip>
+                    <member>any</member>
+                  </source-hip>
+                  <destination-hip>
+                    <member>any</member>
+                  </destination-hip>
+                  <action>allow</action>
+                </entry>
+                <entry name="In-2-INTRA" uuid="f0bd87d4-682d-4dd3-934d-24f2b0d61864">
+                  <to>
+                    <member>L3-Intranet</member>
+                  </to>
+                  <from>
+                    <member>L3-Trust</member>
+                  </from>
+                  <source>
+                    <member>192_Network_Internal</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <category>
+                    <member>any</member>
+                  </category>
+                  <application>
+                    <member>any</member>
+                  </application>
+                  <service>
+                    <member>application-default</member>
+                  </service>
+                  <source-hip>
+                    <member>any</member>
+                  </source-hip>
+                  <destination-hip>
+                    <member>any</member>
+                  </destination-hip>
+                  <action>allow</action>
+                  <source-user>
+                    <member>any</member>
+                  </source-user>
+                </entry>
+              </rules>
+            </security>
+            <default-security-rules>
+              <rules>
+                <entry name="intrazone-default" uuid="2f553e73-29a0-4376-9253-0a7ee0f67b60">
+                  <action>allow</action>
+                  <log-start>no</log-start>
+                  <log-end>yes</log-end>
+                </entry>
+              </rules>
+            </default-security-rules>
+          </rulebase>
+          <user-id-collector>
+            <setting/>
+          </user-id-collector>
+          <import>
+            <network>
+              <interface>
+                <member>ethernet1/1</member>
+                <member>ethernet1/2</member>
+                <member>ethernet1/3</member>
+              </interface>
+            </network>
+          </import>
+          <address>
+            <entry name="192_Network_Internal">
+              <ip-netmask>192.168.11.0/24</ip-netmask>
+            </entry>
+          </address>
+          <address-group>
+            <entry name="Internal_Subnets">
+              <static>
+                <member>192_Network_Internal</member>
+              </static>
+            </entry>
+          </address-group>
+        </entry>
+      </vsys>
+    </entry>
+  </devices>
+</config>
