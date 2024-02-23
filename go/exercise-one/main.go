@@ -4,10 +4,16 @@ import "fmt"
 
 func main() {
 
-	//1:48
+	//2:17
 
-	var n complex64 = 1 + 2i
-	fmt.Printf("%w, %T\n", n, n)
+	// Arrays
+	var students [3]string
+	fmt.Printf("Students: %v\n", students)
+	students[0] = "Lisa"
+	fmt.Printf("Students: %v\n", students)
+
+	// var n complex64 = 1 + 2i
+	// fmt.Printf("%w, %T\n", n, n)
 
 	//bit shifting
 	// a := 8              // 2^3
