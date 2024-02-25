@@ -42,14 +42,6 @@ def fill_final_picture_list(index,size):
         pass
     else:
         line_without_dashes = '-'.join(reverse_list + forward_list)
-        # print(line_without_dashes)
-        # print(string_of_dashes +  line_without_dashes + string_of_dashes)
-        # if index == 0 dashes * 2 
-        # if index == 1 dashes * 2 = --
-        # if index == 2 dashes * 2 = ----
-        # if index == 3 dashes * 2 = ------
-        # if index == 5 dashes * 2 = ----------
-        # if index == 7 dashes * 2 = --------------
 
 def print_rangoli(size):
     for index in range(0,len(alphabet_list[0:size])):
