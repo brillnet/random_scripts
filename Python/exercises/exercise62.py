@@ -1,25 +1,10 @@
 
-
 vowels = ['A','E','I','O','U']
 
 
-# def count_scores(stuarts_score,kevins_score):
 
-#     for val in combinations_list:
-#         print(val[0])
-#         if val[0] in vowels:
-#             stuarts_score = stuarts_score + 1
-#         else:
-#             kevins_score = kevins_score + 1
+def minion_game(sample_string,kevins_score,stuarts_score):
 
-#     return (stuarts_score,kevins_score)
-
-
-def minion_game(str):
-
-    stuarts_score = 0
-    kevins_score = 0
-    substrings = {}
 
     #  First pass
     #  B,A,N,A,N,A
@@ -30,36 +15,54 @@ def minion_game(str):
     #  Fourth pass
     #  BANA,ANAN,NANA,
 
-    #  Increase slice size by 1 on each pass.
+    #  first pass
+    # [0,1] [1,2],[2,3],[3,4],[4,5], [5,6]
 
+    #  second pass
+    # [0,2], [1,3], [2,4], [3,5], [4,6]
 
-    substring_length = 1
+    #  third pass
+    # [0,3], [1,4], [2,5], [3,6]
 
-    for index in range(0,len(str)):
+    counter = 1
 
-        print('Substring length: ' + str(substring_length))
-        if substring_length == 1:
-            print(str[index])
-        else:
+    while counter <= len(sample_string):
+        for index in range(0,len(sample_string)):
 
+            #  This if statement is needed to deal with
+            #  slices that go past the final index in the string.
+            if index + counter == len(sample_string) + 1:
+                break
 
+            # print(str(index),index+counter)
+            # print(sample_string[index:index+counter])
 
-        #  second pass
-        [0,1] [1,2],[2,3],[3,4],[4,5]
-        print(str[index])
+            #  Checking to see if substring starts with vowel or
+            #  consient.
+            if sample_string[index] in vowels:
+                kevins_score = kevins_score + 1
+            else:
+                stuarts_score = stuarts_score + 1
 
-        #  third pass
-        [0,2], [1,3], [2,4], [3,5]
+        #  Adding one to counter. This counter will indicate the substring
+        #  length.
+        counter = counter + 1
 
-        #  fourth pass
-        [0,3], [1,4], [2,5]
+    #  Returning scores
+    return (kevins_score,stuarts_score)
 
-    # your code goes here
-
-
-
+    
 if __name__ == '__main__':
     # s = input()
-    minion_game('BANANA')
-    print('Final Scores\n')
-    print (stuarts_score,kevins_score)
+
+    kevins_score = 0
+    stuarts_score = 0
+
+    (kevins_score,stuarts_score) = minion_game('BANANA',kevins_score,stuarts_score)
+
+    if kevins_score > stuarts_score:
+        print('Kevin ' + str(kevins_score))
+    elif stuarts_score > kevins_score:
+        print('Stuarts ' + str(stuarts_score))
+    else:
+        print('Draw')
