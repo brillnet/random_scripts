@@ -1,10 +1,7 @@
-
 vowels = ['A','E','I','O','U']
 
 
-
 def minion_game(sample_string,kevins_score,stuarts_score):
-
 
     #  First pass
     #  B,A,N,A,N,A
