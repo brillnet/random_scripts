@@ -19,10 +19,10 @@ def merge_the_tools(string,k):
         #  Third pass
         #  6,9
         if index == 0:
-            sample_dictionary[index] = index + 3
+            sample_dictionary[index] = index + k
             print_non_duplicates(set(string[index:index+3]))
         elif index in sample_dictionary.values():
-            sample_dictionary[index] = index + 3
+            sample_dictionary[index] = index + k
             print_non_duplicates(set(string[index:index+3]))
         else:
             pass
@@ -33,10 +33,6 @@ def print_non_duplicates(no_duplicates_set):
 
         #  Criteria for filling dictionary
         # 0,3,6,9
-
-
-
-
 
 sample_string = 'AABCAAADA'
 string_length = 3
