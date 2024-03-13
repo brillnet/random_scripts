@@ -21,7 +21,7 @@ values_list = print_differences(values_list,set_a,set_b)
 #  Printing out values that exist in set b bot not set 1.
 values_list = print_differences(values_list,set_b,set_a)
 
+#  Printing ordered list
 for val in sorted(values_list):
     print(val)
 
-    
