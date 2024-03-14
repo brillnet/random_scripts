@@ -1,23 +1,28 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 from html.parser import HTMLParser
 import sys
 
 # create a subclass and override the handler methods
 class MyHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
-        print("Found a start tag  :", tag)
-        print(attrs)
+        print("Start :", tag)
+        if attrs:
+            self.print_attributes(attrs)
     def handle_endtag(self, tag):
-        print("Found an end tag   :", tag)
+        print("End   :", tag)
     def handle_startendtag(self, tag, attrs):
-        print("Found an empty tag :", tag)
-        print(attrs)
+        print("Empty :", tag)
+        if attrs:
+            self.print_attributes(attrs)
+    def print_attributes(self,attributes_list):
+        for index in range(len(attributes_list)):
+            print('-> '+attributes_list[index][0] + ' > ' + \
+            str(attributes_list[index][1]))
         
 # instantiate the parser and fed it some HTML
 parser = MyHTMLParser()
-parser.feed('<img src="python-logo.png" alt="The Python logo">')
-# parser.feed("<html><head><title>HTML Parser - I</title></head>"
-#             +"<body><h1>HackerRank</h1><br /></body></html>")
+num_lines_of_html = sys.stdin.readline()
 
-for line in sys.stdin.readlines():
-    print(line.strip())
+for html_line in range(0,int(num_lines_of_html)):
+    #  parser object and feeding each line of html to it
+    parser = MyHTMLParser()
+    parser.feed(sys.stdin.readline().strip())
