@@ -5,40 +5,12 @@ services:
     user: root
     build:
       context: .
-    image: fluentd
+      dockerfile: Dockerfile
+    environment:
+        - PYTHONUNBUFFERED=1
     volumes:
-    - /var/lib/docker/containers:/fluentd/log/containers # Example: Reading docker logs
-    - ./file:/fluentd/log/files/ #Example: Reading logs from a file
+    - /var/log/:/fluentd/log/files/ #  Path to syslog file that is read by fluent.conf
     - ./configurations:/fluentd/etc/
-    - ./logs:/output/ # Example: Fluentd will collect logs and store it here for demo
+    - ./output/:/output/ # This directory will hold the script that hit the paloalto api
     logging:
       driver: "local"
-  # This app writes logs to a local file
-  file-myapp:
-    container_name: file-myapp
-    image: alpine
-    volumes:
-    - ./file:/app
-    command: [ /bin/sh , -c , "chmod +x /app/app.sh && ./app/app.sh"]
-  # This app will hold the ldap server with all needed variables.
-  ldap-service:
-    container_name: ldap-service
-    image: osixia/openldap:latest
-    ports:
-      - "389:389"
-      - "636:636"
-    environment:
-      - LDAP_ORGANISATION="AUTOZONE"
-      - LDAP_DOMAIN="AUTOZONE.com"
-      - LDAP_ADMIN_PASSWORD="test123" 
-  #  This app will be used to hold the server that manages the
-  #  ldap server.
-  phpldapadmin-service :
-    container_name: phpldapadmin-service
-    image: osixia/openldap:latest
-    ports:
-      - "443:443"
-    links:
-      - ldap-service
-    environment:
-      - PHPLDAPADMIN_LDAP_HOSTS=ldap-host 
