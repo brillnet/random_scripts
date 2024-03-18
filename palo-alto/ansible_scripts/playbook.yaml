@@ -1,0 +1,11 @@
+- hosts: desktops
+  tasks:
+  - name: Install ldap packages on client
+    ansible.builtin.package:
+      name: 
+        - libnss-ldap
+        - libpam-ldap
+        - ldap-utils
+        - nscd
+      state: present
+    become: true
