@@ -9,3 +9,13 @@
         - nscd
       state: present
     become: true
+  - name: Copy file and set owner and permissions
+    copy:
+      src: ./files/ldap.conf
+      dest: /etc/ldap.conf
+      owner: none
+      group: none
+      mode: 0644
+    become: true
+
+
