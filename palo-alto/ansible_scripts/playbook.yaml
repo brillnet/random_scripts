@@ -13,6 +13,11 @@
         - docker-compose-plugin
       state: present
     become: true
+  - name: Stopping httpd
+    ansible.builtin.service:
+      name: httpd
+      state: stopped
+    become: true
 - hosts: desktops
   tasks:
   - name: Install ldap packages on client
