@@ -1,3 +1,20 @@
+- hosts: webserver
+  tasks:
+  - name: Add repository
+    ansible.builtin.yum_repository:
+      name: docker
+      description: docker repo
+      baseurl: https://download.docker.com/linux/centos/docker-ce.repo  
+  - name: Install docker packages on webserver
+    ansible.builtin.package:
+      name: 
+        - docker-ce 
+        - docker-ce-cli
+        - containerd.io 
+        - docker-buildx-plugin
+        - docker-compose-plugin
+      state: present
+    become: true
 - hosts: desktops
   tasks:
   - name: Install ldap packages on client
