@@ -9,7 +9,7 @@
         - nscd
       state: present
     become: true
-  - name: Copy file and set owner and permissions
+  - name: Copy ldap.conf file
     copy:
       src: ./files/ldap.conf
       dest: /etc/ldap.conf
@@ -17,5 +17,30 @@
       group: none
       mode: 0644
     become: true
+  - name: Copy nsswitch.conf file
+    copy:
+      src: ./files/nsswitch.conf
+      dest: /etc/nsswitch.conf
+      owner: root
+      group: root
+      mode: 0644
+    become: true
+  - name: Copy common-password file
+    copy:
+      src: ./files/common-password
+      dest: /etc/pam.d/common-password
+      owner: root
+      group: root
+      mode: 0644
+    become: true
+  - name: Copy common-session file
+    copy:
+      src: ./files/common-session
+      dest: /etc/pam.d/common-session
+      owner: root
+      group: root
+      mode: 0644
+    become: true
+
 
 
