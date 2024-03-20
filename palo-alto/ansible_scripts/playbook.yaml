@@ -13,19 +13,19 @@
         - docker-buildx-plugin
         - docker-compose-plugin
       state: present
-   - name: Checking to see if ldap container is installed
-      docker_container:
-        name: ldap-service
-        state: started
-        image: "osixia/openldap:latest"
-        pull: true
-        ports:
-          - "389:389"
-          - "636:636"
-        env:
-          - LDAP_ORGANISATION:"AUTOZONE" 
-          - LDAP_DOMAIN:"AUTOZONE.com" 
-          - LDAP_ADMIN_PASSWORD:"test123" 
+  - name: Checking to see if ldap container is installed
+    docker_container:
+      name: ldap-service
+      state: started
+      image: "osixia/openldap:latest"
+      pull: true
+      ports:
+        - "389:389"
+        - "636:636"
+      env:
+        - LDAP_ORGANISATION:"AUTOZONE" 
+        - LDAP_DOMAIN:"AUTOZONE.com" 
+        - LDAP_ADMIN_PASSWORD:"test123" 
   - name: Stopping httpd
     ansible.builtin.service:
       name: httpd
