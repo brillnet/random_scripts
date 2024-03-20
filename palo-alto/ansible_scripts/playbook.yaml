@@ -33,8 +33,8 @@
     copy:
       src: ./files/ldap.conf
       dest: /etc/ldap.conf
-      owner: none
-      group: none
+      owner: root
+      group: root
       mode: 0644
     become: true
   - name: Copy nsswitch.conf file
