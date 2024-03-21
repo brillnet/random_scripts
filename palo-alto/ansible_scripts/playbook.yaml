@@ -23,9 +23,11 @@
         - "389:389"
         - "636:636"
       env:
-        - LDAP_ORGANISATION:"AUTOZONE" 
-        - LDAP_DOMAIN:"AUTOZONE.com" 
-        - LDAP_ADMIN_PASSWORD:"test123" 
+        "LDAP_ORGANISATION": "AUTOZONE" 
+        "LDAP_DOMAIN": "AUTOZONE.com"
+        "LDAP_ADMIN_PASSWORD": "test123"
+      vars:
+        ansible_python_interpreter: /bin/python3
   - name: Stopping httpd
     ansible.builtin.service:
       name: httpd
