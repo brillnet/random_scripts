@@ -3,7 +3,20 @@
   tasks:
   - name: Add repository
     command: "/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
-    become: true  
+  
+  - name: Install EPEL repo
+    yum:
+      name: epel-release
+      state: present
+  
+  - name: Installing Python3
+    ansible.builtin.package:
+      name:
+        - python3
+      state: present
+  - name: Install docker sdk
+    command: "/bin/pip3 install docker"
+  
   - name: Install docker packages on webserver
     ansible.builtin.package:
       name: 
@@ -13,7 +26,10 @@
         - docker-buildx-plugin
         - docker-compose-plugin
       state: present
+  
   - name: Checking to see if ldap container is installed
+    vars:
+      ansible_python_interpreter: /bin/python3
     docker_container:
       name: ldap-service
       state: started
@@ -26,12 +42,12 @@
         "LDAP_ORGANISATION": "AUTOZONE" 
         "LDAP_DOMAIN": "AUTOZONE.com"
         "LDAP_ADMIN_PASSWORD": "test123"
-      vars:
-        ansible_python_interpreter: /bin/python3
+  
   - name: Stopping httpd
     ansible.builtin.service:
       name: httpd
       state: stopped
+
 - hosts: desktops
   tasks:
   - name: Install ldap packages on client
@@ -42,6 +58,7 @@
         - ldap-utils
         - nscd
       state: present
+  
   - name: Copy ldap.conf file
     copy:
       src: ./files/ldap.conf
@@ -49,6 +66,7 @@
       owner: root
       group: root
       mode: 0644
+  
   - name: Copy nsswitch.conf file
     copy:
       src: ./files/nsswitch.conf
@@ -56,6 +74,7 @@
       owner: root
       group: root
       mode: 0644
+  
   - name: Copy common-password file
     copy:
       src: ./files/common-password
@@ -63,6 +82,7 @@
       owner: root
       group: root
       mode: 0644
+  
   - name: Copy common-session file
     copy:
       src: ./files/common-session
@@ -70,6 +90,4 @@
       owner: root
       group: root
       mode: 0644
-
-
 
