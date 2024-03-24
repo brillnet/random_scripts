@@ -14,3 +14,25 @@ services:
     - ./output/:/output/ # This directory will hold the script that hit the paloalto api
     logging:
       driver: "local"
+  # This app will hold the ldap server with all needed variables.
+  ldap-service:
+    container_name: ldap-service
+    image: osixia/openldap:latest
+    ports:
+      - "389:389"
+      - "636:636"
+    environment:
+      - LDAP_ORGANISATION="AUTOZONE"
+      - LDAP_DOMAIN="AUTOZONE.com"
+      - LDAP_ADMIN_PASSWORD="test123" 
+  #  This app will be used to hold the server that manages the
+  #  ldap server.
+  phpldapadmin-service:
+    container_name: phpldapadmin-service
+    image: osixia/openldap:latest
+    ports:
+      - "443:443"
+    links:
+      - ldap-service
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap-host 
