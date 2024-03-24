@@ -26,7 +26,12 @@
         - docker-buildx-plugin
         - docker-compose-plugin
       state: present
-  
+
+  - name: Start service docker, if not started
+    ansible.builtin.service:
+      name: docker
+      state: started
+
   - name: Checking to see if ldap container is installed
     vars:
       ansible_python_interpreter: /bin/python3
@@ -42,6 +47,20 @@
         "LDAP_ORGANISATION": "AUTOZONE" 
         "LDAP_DOMAIN": "AUTOZONE.com"
         "LDAP_ADMIN_PASSWORD": "test123"
+
+  - name: Checking to see if phpadmin is installed
+    vars:
+      ansible_python_interpreter: /bin/python3
+    docker_container:
+      name: phpadmin
+      state: started
+      image: "osixia/phpldapadmin:latest"
+      pull: true
+      links: "ldap-service:ldap-host"
+      ports:
+        - "443:443"
+      env:
+        "PHPLDAPADMIN_LDAP_HOSTS": "ldap-host"
   
   - name: Stopping httpd
     ansible.builtin.service:
@@ -49,6 +68,7 @@
       state: stopped
 
 - hosts: desktops
+  become: true
   tasks:
   - name: Install ldap packages on client
     ansible.builtin.package:
@@ -90,4 +110,6 @@
       owner: root
       group: root
       mode: 0644
+
+
 
