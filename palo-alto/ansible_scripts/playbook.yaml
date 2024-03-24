@@ -1,10 +1,10 @@
 - hosts: webserver
   become: true
   tasks:
-  - name: Add repository
+  - name: Adding docker repository
     command: "/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
   
-  - name: Install EPEL repo
+  - name: Adding EPEL repo
     yum:
       name: epel-release
       state: present
@@ -14,10 +14,30 @@
       name:
         - python3
       state: present
-  - name: Install docker sdk
+
+  - name: Installing docker sdk
     command: "/bin/pip3 install docker"
-  
-  - name: Install docker packages on webserver
+
+  - name: Installing git
+    ansible.builtin.package:
+      name:
+        - git
+      state: present
+
+  - name: Creating directory where github repo will be cloned to
+    ansible.builtin.file:
+      path: /home/fuel/github
+      state: directory
+      recurse: yes
+      owner: fuel
+      group: fuel
+
+  - name: Cloning my repo into /home/fuel/github
+    ansible.builtin.git:
+      repo: https://github.com/woodsman22/random_scripts.git
+      dest: /home/fuel/github
+
+  - name: Installing docker packages on webserver
     ansible.builtin.package:
       name: 
         - docker-ce 
@@ -32,35 +52,10 @@
       name: docker
       state: started
 
-  - name: Checking to see if ldap container is installed
-    vars:
-      ansible_python_interpreter: /bin/python3
-    docker_container:
-      name: ldap-service
-      state: started
-      image: "osixia/openldap:latest"
-      pull: true
-      ports:
-        - "389:389"
-        - "636:636"
-      env:
-        "LDAP_ORGANISATION": "AUTOZONE" 
-        "LDAP_DOMAIN": "AUTOZONE.com"
-        "LDAP_ADMIN_PASSWORD": "test123"
-
-  - name: Checking to see if phpadmin is installed
-    vars:
-      ansible_python_interpreter: /bin/python3
-    docker_container:
-      name: phpadmin
-      state: started
-      image: "osixia/phpldapadmin:latest"
-      pull: true
-      links: "ldap-service:ldap-host"
-      ports:
-        - "443:443"
-      env:
-        "PHPLDAPADMIN_LDAP_HOSTS": "ldap-host"
+  - name: Run container
+    shell:
+      cmd: "docker compose -f docker-compose.yaml up -d"
+      chdir: /home/fuel/github/palo-alto/user-id_ldap/
   
   - name: Stopping httpd
     ansible.builtin.service:
