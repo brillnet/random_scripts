@@ -81,6 +81,14 @@
       owner: root
       group: root
       mode: 0644
+
+  - name: Copy ldap.secret file
+    copy:
+      src: ./files/ldap.secret
+      dest: /etc/ldap.secret
+      owner: root
+      group: root
+      mode: 0600
   
   - name: Copy nsswitch.conf file
     copy:
