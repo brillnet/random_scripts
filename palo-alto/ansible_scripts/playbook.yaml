@@ -52,15 +52,15 @@
       name: docker
       state: started
 
-  - name: Starting fluentd,ldap and phpadmin containers
-    shell:
-      cmd: "docker compose -f docker-compose.yaml up -d"
-      chdir: /home/fuel/github/palo-alto/user-id_ldap/
-  
   - name: Stopping httpd
     ansible.builtin.service:
       name: httpd
       state: stopped
+
+  - name: Starting fluentd,ldap and phpadmin containers
+    shell:
+      cmd: "docker compose -f docker-compose.yaml up -d"
+      chdir: /home/fuel/github/palo-alto/user-id_ldap/
 
 - hosts: desktops
   become: true
@@ -105,6 +105,4 @@
       owner: root
       group: root
       mode: 0644
-
-
 
