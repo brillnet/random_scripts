@@ -18,6 +18,7 @@ services:
   ldap-service:
     container_name: ldap-service
     image: osixia/openldap:latest
+    host: ldap-service
     ports:
       - "389:389"
       - "636:636"
@@ -30,9 +31,10 @@ services:
   phpldapadmin-service:
     container_name: phpldapadmin-service
     image: osixia/phpldapadmin:latest
+    host: phpldapadmin-service
     ports:
       - "443:443"
     links:
-      - ldap-service
+      - ldap-service:ldap-host
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap-host 
