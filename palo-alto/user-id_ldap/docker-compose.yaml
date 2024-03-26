@@ -24,7 +24,9 @@ services:
     environment:
       - LDAP_ORGANISATION=AUTOZONE
       - LDAP_DOMAIN=AUTOZONE.com
-      - LDAP_ADMIN_PASSWORD=test123 
+      - LDAP_ADMIN_PASSWORD=test123
+    logging:
+      driver: "local" 
   #  This app will be used to hold the server that manages the
   #  ldap server.
   phpldapadmin-service:
