@@ -26,7 +26,7 @@ services:
       - LDAP_DOMAIN=AUTOZONE.com
       - LDAP_ADMIN_PASSWORD=test123
     logging:
-      driver: "local" 
+      driver: "syslog" 
   #  This app will be used to hold the server that manages the
   #  ldap server.
   phpldapadmin-service:
