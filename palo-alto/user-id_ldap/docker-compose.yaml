@@ -18,23 +18,21 @@ services:
   ldap-service:
     container_name: ldap-service
     image: osixia/openldap:latest
-    host: ldap-service
     ports:
       - "389:389"
       - "636:636"
     environment:
-      - LDAP_ORGANISATION="AUTOZONE"
-      - LDAP_DOMAIN="AUTOZONE.com"
-      - LDAP_ADMIN_PASSWORD="test123" 
+      - LDAP_ORGANISATION=AUTOZONE
+      - LDAP_DOMAIN=AUTOZONE.com
+      - LDAP_ADMIN_PASSWORD=test123 
   #  This app will be used to hold the server that manages the
   #  ldap server.
   phpldapadmin-service:
     container_name: phpldapadmin-service
     image: osixia/phpldapadmin:latest
-    host: phpldapadmin-service
     ports:
       - "443:443"
     links:
-      - ldap-service:ldap-host
+      - "ldap-service:ldap-host"
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap-host 
