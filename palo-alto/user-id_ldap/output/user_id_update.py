@@ -9,14 +9,14 @@ output = open("/output/foobar.out", "a")
 for line in input:
 
     #  Pulling values out of list
-    value_list = re.sub(r"\s+", " ", line).split(' ')
+    values_list = re.sub(r"\s+", " ", line).split(' ')
 
     #  Filling openldap_event_dictionary
     openldap_event_dictionary['ip'] = values_list[3]
     openldap_event_dictionary['username'] = values_list[4]
     openldap_event_dictionary['group'] = values_list[5]
-    output.write(' '.join(openldap_event_dictionary.keys())
-    output.write(' '.join(openldap_event_dictionary.values())
+    output.write(' '.join(openldap_event_dictionary.keys()))
+    output.write(' '.join(openldap_event_dictionary.values()))
 
 #    output.write(line)
 output.close
@@ -36,7 +36,7 @@ headers = {'Content-Type': 'application/xml'}
 
 try:
     requests.post('{api_url}{key}'.format(**palo_api_info),
-                        data=login_payload, headers=headers,timeout=3).text
+                        data=login_payload, headers=headers,timeout=3,verify=False).text
 except requests.exceptions.ConnectionError:
     print("A connection error occurred. Please check your internet connection.")
 except requests.exceptions.Timeout:
