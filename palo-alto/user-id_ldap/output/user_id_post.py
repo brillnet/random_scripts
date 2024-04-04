@@ -3,7 +3,7 @@ import requests,sys,re
 params = {
     'type': 'user-id',
     'action': 'set',
-    'key': 'LUFRPT05VVlIK0lXQUhzZFU1YllReTlYYTVDVitIVkE9R1ZENDM0QU5oenIySlUwR0V4OXJMVVNCSWdKU3pQbCtTclExS0dIUWZHa0Q4c01IVGRERElwWDhKeUdvNVRVNw==',
+    'key': '',
 }
 
 #  Creating empty dictionary that will hold username,group
@@ -16,7 +16,6 @@ output = open("/output/foobar.out", "a")
 #output.write(input.readline())
 
 for line in input:
-
 
     #  Pulling values out of login_variables_found string
     values_list = re.sub(r"\s+", " ", line).split(' ')
