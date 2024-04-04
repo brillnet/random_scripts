@@ -3,7 +3,7 @@ import requests,sys,re
 params = {
     'type': 'user-id',
     'action': 'set',
-    'key': '',
+    'key': 'LUFRPT02V3RtYmd5LzdlWVhSR21keHRldG1KcEpZNWs9R1ZENDM0QU5oenIySlUwR0V4OXJMWklpN0R2aVdZcWZTSEVRODQwUGZEMi9uc2hwbnlxRllDTUVSbUtpdCtBbA==',
 }
 
 #  Creating empty dictionary that will hold username,group
@@ -13,17 +13,17 @@ openldap_event_dictionary = {'username': '', 'group': '', 'ip': ''}
 input = open(sys.argv[-1])
 output = open("/output/foobar.out", "a")
 
-#  Getting data found from regex's.
-line = input.readline()
+#output.write(input.readline())
 
-#  Pulling values out of line and putting them in
-#  a list.
-values_list = re.sub(r"\s+", " ", line).split(' ')
+for line in input:
 
-#  Filling openldap_event_dictionary
-openldap_event_dictionary['ip'] = values_list[3]
-openldap_event_dictionary['username'] = values_list[4]
-openldap_event_dictionary['group'] = values_list[5]
+    #  Pulling values out of login_variables_found string
+    values_list = re.sub(r"\s+", " ", line).split(' ')
+
+    #  Filling openldap_event_dictionary
+    openldap_event_dictionary['ip'] = values_list[3]
+    openldap_event_dictionary['username'] = values_list[4]
+    openldap_event_dictionary['group'] = values_list[5]
 
 #  Login XML Payload string
 login_payload = '''<uid-message>
