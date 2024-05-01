@@ -1,0 +1,2 @@
+#  Compiling program with debugging flag so C code can be seen in gdb.
+ gcc -o exercise2 exercise2.c -g
