@@ -1,0 +1,116 @@
+- hosts: webserver
+  become: true
+  tasks:
+  - name: Adding docker repository
+    command: "/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
+  
+  - name: Adding EPEL repo
+    yum:
+      name: epel-release
+      state: present
+  
+  - name: Installing Python3
+    ansible.builtin.package:
+      name:
+        - python3
+      state: present
+
+  - name: Installing docker sdk
+    command: "/bin/pip3 install docker"
+
+  - name: Installing git
+    ansible.builtin.package:
+      name:
+        - git
+      state: present
+
+  - name: Creating directory where github repo will be cloned to
+    ansible.builtin.file:
+      path: /home/fuel/github
+      state: directory
+      recurse: yes
+      owner: fuel
+      group: fuel
+
+  - name: Cloning my repo into /home/fuel/github
+    ansible.builtin.git:
+      repo: https://github.com/woodsman22/random_scripts.git
+      dest: /home/fuel/github
+
+  - name: Installing docker packages on webserver
+    ansible.builtin.package:
+      name: 
+        - docker-ce 
+        - docker-ce-cli
+        - containerd.io 
+        - docker-buildx-plugin
+        - docker-compose-plugin
+      state: present
+
+  - name: Start service docker, if not started
+    ansible.builtin.service:
+      name: docker
+      state: started
+
+  - name: Stopping httpd
+    ansible.builtin.service:
+      name: httpd
+      state: stopped
+
+  - name: Starting fluentd,ldap and phpadmin containers
+    shell:
+      cmd: "docker compose -f docker-compose.yaml up -d"
+      chdir: /home/fuel/github/palo-alto/user-id_ldap/
+
+- hosts: desktops
+  become: true
+  tasks:
+  - name: Install ldap packages on client
+    ansible.builtin.package:
+      name: 
+        - libnss-ldap
+        - libpam-ldap
+        - ldap-utils
+        - nscd
+      state: present
+  
+  - name: Copy ldap.conf file
+    copy:
+      src: ./files/ldap.conf
+      dest: /etc/ldap.conf
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: Copy ldap.secret file
+    copy:
+      src: ./files/ldap.secret
+      dest: /etc/ldap.secret
+      owner: root
+      group: root
+      mode: 0600
+  
+  - name: Copy nsswitch.conf file
+    copy:
+      src: ./files/nsswitch.conf
+      dest: /etc/nsswitch.conf
+      owner: root
+      group: root
+      mode: 0644
+  
+  - name: Copy common-password file
+    copy:
+      src: ./files/common-password
+      dest: /etc/pam.d/common-password
+      owner: root
+      group: root
+      mode: 0644
+  
+  - name: Copy common-session file
+    copy:
+      src: ./files/common-session
+      dest: /etc/pam.d/common-session
+      owner: root
+      group: root
+      mode: 0644
+

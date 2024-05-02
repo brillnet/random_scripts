@@ -1,0 +1,31 @@
+- hosts: aws_vm
+  become: true
+  tasks:
+  - name: Installing libreswan
+    ansible.builtin.dnf:
+      name: libreswan
+      state: latest
+
+  - name: Copy connections.conf file
+    copy:
+      src: ./files/connections.conf
+      dest: /etc/ipsec.d/
+      owner: root
+      group: root
+      mode: 0744
+
+  - name: Copy connections.secrets file
+    copy:
+      src: ./files/connections.secrets
+      dest: /etc/ipsec.d/
+      owner: root
+      group: root
+      mode: 0744
+
+  - name: Copy connections.secrets file
+    copy:
+      src: ./files/sysctl.conf
+      dest: /etc/
+      owner: root
+      group: root
+      mode: 0644
