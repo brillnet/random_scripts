@@ -29,10 +29,10 @@ int main()
     printf("%d %d", sumOne, diffOne);
     printf("\n");
 
-    /* Getting sumOne */
+    /* Getting sumTwo */
     float sumTwo = c + d;
 
-    /* Getting diffOne */
+    /* Getting diffTwo */
     float diffTwo = c - d;
 
     /* Printing the above two values */
