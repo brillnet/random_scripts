@@ -4,9 +4,8 @@
 void update(int *a,int *b) {
     // Complete this function
 
-    //  Holding value of housed in *a in
-    //  mem location, because the old one
-    //  will be overwritten.
+    //  Holding original value housed in *a in
+    //  old_a variable.
     int old_a = *a;
 
     //  Getting sum and absolute value of difference.
