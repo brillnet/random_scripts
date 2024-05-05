@@ -7,13 +7,12 @@
       state: latest
 
   - name: Copy connections.conf file
-    copy:
-      src: ./files/connections.conf
-      dest: /etc/ipsec.d/
+    ansible.builtin.template:
+      src: ./templates/connections.conf
+      dest: /etc/ipsec.d
       owner: root
       group: root
-      mode: 0744
-
+      mode: '0755'
   - name: Copy connections.secrets file
     copy:
       src: ./files/connections.secrets
@@ -21,7 +20,6 @@
       owner: root
       group: root
       mode: 0744
-
   - name: Copy connections.secrets file
     copy:
       src: ./files/sysctl.conf
