@@ -15,9 +15,6 @@ char operation_or = 'o';
 char operation_x = 'x';
 
 void set_max_operation_result(int n, char o) {
-
-
-
     if (n < 4)
     {
         if (n > max_and_operator)
