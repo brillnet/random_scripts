@@ -5,6 +5,30 @@
 
 //  ToDo: Print maximum values.
 
+int max_and_operator = 0;
+int max_or_operation_result = 0;
+int max_x_or_operation_result = 0;
+
+// Setting the type operation char
+char operation_and = 'a';
+char operation_or = 'o';
+char operation_x = 'x';
+
+void set_max_operation_result(int n, char o) {
+
+
+
+    if (n < 4)
+    {
+        if (n > max_and_operator)
+        {
+             if (strcmp(o, operation_and)) {
+                max_and_operator = n;
+             }
+        }
+    }
+}
+
 void calculate_the_maximum(int n, int k) {
 
     //  Declaring counter.
@@ -15,12 +39,16 @@ void calculate_the_maximum(int n, int k) {
 
     //  And operation
     int and_operation_result;
-
+    
     //  Or operation
     int or_operation_result;
 
     //  Xor operation
     int x_or_operation_result;
+
+    //  Creating char value that will the type
+    //  of operation either a,o,x
+    char operation;
 
     //  For loop to get all of the combinations
     //  of numbers.
@@ -34,6 +62,8 @@ void calculate_the_maximum(int n, int k) {
             //  Running and operation against
             //  i and z.
             and_operation_result = i & z;
+            
+            set_max_operation_result(and_operation_result, operation);
 
             //  Running or operation against
             //  i and z.
