@@ -5,7 +5,7 @@
 
 //  ToDo: Print maximum values.
 
-int max_and_operator = 0;
+int max_and_operation_result = 0;
 int max_or_operation_result = 0;
 int max_x_or_operation_result = 0;
 
@@ -14,14 +14,29 @@ char operation_and = 'a';
 char operation_or = 'o';
 char operation_x = 'x';
 
-void set_max_operation_result(int n, char o) {
-    if (n < 4)
+
+void set_max_operation_result(int n, char o, int k) {
+    if (n < k)
     {
-        if (n > max_and_operator)
-        {
-             if (strcmp(o, operation_and)) {
-                max_and_operator = n;
-             }
+        if (o == operation_and) {
+            if (n > max_and_operation_result)
+            {
+                max_or_operation_result = n;
+            }
+        }
+
+        if (o == operation_or) {
+            if (n > max_or_operation_result)
+            {
+                max_or_operation_result = n;
+            }
+        }
+
+        if (o == operation_x) {
+            if (n > max_x_or_operation_result)
+            {
+                max_x_or_operation_result = n;
+            }
         }
     }
 }
@@ -60,21 +75,25 @@ void calculate_the_maximum(int n, int k) {
             //  i and z.
             and_operation_result = i & z;
             
-            set_max_operation_result(and_operation_result, operation);
+            //  Setting operation type
+            operation = 'a';
+            set_max_operation_result(and_operation_result, operation, k);
 
             //  Running or operation against
             //  i and z.
             or_operation_result = i | z;
+            
+            //  Setting operation type
+            operation = 'o';
+            set_max_operation_result(or_operation_result, operation, k);
 
             //  Running xor operation against
             //  i and z.
             x_or_operation_result = i ^ z;
-
-            printf("%s","\n");
-            printf("%d %d %d",
-            and_operation_result,
-            or_operation_result,
-            x_or_operation_result);
+            
+            //  Setting operation type
+            operation = 'x';
+            set_max_operation_result(x_or_operation_result, operation, k);
         }
     }
 }
@@ -84,6 +103,8 @@ int main() {
   
     scanf("%d %d", &n, &k);
     calculate_the_maximum(n, k);
+
+    printf("%d %d %d",max_and_operation_result,max_or_operation_result,max_x_or_operation_result);
  
     return 0;
 }
