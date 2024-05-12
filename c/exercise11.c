@@ -4,7 +4,6 @@
 #include <stdlib.h>
 
 //  ToDo: Print maximum values.
-
 int max_and_operation_result = 0;
 int max_or_operation_result = 0;
 int max_x_or_operation_result = 0;
@@ -21,7 +20,7 @@ void set_max_operation_result(int n, char o, int k) {
         if (o == operation_and) {
             if (n > max_and_operation_result)
             {
-                max_or_operation_result = n;
+                max_and_operation_result = n;
             }
         }
 
@@ -68,9 +67,6 @@ void calculate_the_maximum(int n, int k) {
     {
         for (z = i + 1; z <= n; z++)
         {
-            // printf("%d %d",i,z);
-            // printf("%s","\n");
-
             //  Running and operation against
             //  i and z.
             and_operation_result = i & z;
@@ -100,11 +96,17 @@ void calculate_the_maximum(int n, int k) {
 
 int main() {
     int n, k;
-  
+    n = 5;
+    k = 4;
     scanf("%d %d", &n, &k);
     calculate_the_maximum(n, k);
 
-    printf("%d %d %d",max_and_operation_result,max_or_operation_result,max_x_or_operation_result);
- 
+    printf("%d",max_and_operation_result);
+    printf("%s","\n");
+    printf("%d",max_or_operation_result);
+    printf("%s","\n");
+    printf("%d",max_x_or_operation_result);
+    printf("%s","\n");
+
     return 0;
 }
