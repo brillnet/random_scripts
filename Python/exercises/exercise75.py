@@ -13,8 +13,11 @@ def minion_game(string):
         'U':'U'
     }
     
-    kevinsDictionary = {}    
+    kevinsDictionary = {}
+    kevinsDictionary['total'] = 0
+
     stevesDictionary = {}
+    stevesDictionary['total'] = 0
 
     
     for i in range(len(string)+1):
@@ -37,13 +40,18 @@ def minion_game(string):
                 #  dictionary
                 try:
                     kevinsDictionary[stringSlice] = kevinsDictionary[stringSlice] + 1
+                    kevinsDictionary['total'] = kevinsDictionary['total'] + 1
                 except:
                     kevinsDictionary[stringSlice] = 1
+                    kevinsDictionary['total'] = 1
             else:
                 try:
                     stevesDictionary[stringSlice] = stevesDictionary[stringSlice] + 1
+                    stevesDictionary['total'] = stevesDictionary['total'] + 1
                 except:
                     stevesDictionary[stringSlice] = 1
+                    stevesDictionary['total'] = 1
+
     
 
     #  Put sum in individual dictionary to make the below
@@ -58,5 +66,4 @@ def minion_game(string):
         print('Stuart ' + str(stevesSum))
 
 if __name__ == '__main__':
-    s = input()
-    minion_game(s)
+    minion_game('BANANA')
