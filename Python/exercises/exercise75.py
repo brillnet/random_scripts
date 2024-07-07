@@ -43,27 +43,22 @@ def minion_game(string):
                     kevinsDictionary['total'] = kevinsDictionary['total'] + 1
                 except:
                     kevinsDictionary[stringSlice] = 1
-                    kevinsDictionary['total'] = 1
+                    kevinsDictionary['total'] = kevinsDictionary['total'] + 1
             else:
                 try:
                     stevesDictionary[stringSlice] = stevesDictionary[stringSlice] + 1
                     stevesDictionary['total'] = stevesDictionary['total'] + 1
                 except:
                     stevesDictionary[stringSlice] = 1
-                    stevesDictionary['total'] = 1
+                    stevesDictionary['total'] = stevesDictionary['total'] + 1
 
     
 
-    #  Put sum in individual dictionary to make the below
-    #  go much faster.    
-    kevinsSum = sum(list(kevinsDictionary.values()))
-    stevesSum = sum(list(stevesDictionary.values()))
-    
-    #  See comment above
-    if kevinsSum > stevesSum:
-        print('Kevins ' + str(kevinsSum))
+    #  Checking to see who has the greatest total.
+    if kevinsDictionary['total'] > stevesDictionary['total']:
+        print('Kevins ' + str(kevinsDictionary['total']))
     else:
-        print('Stuart ' + str(stevesSum))
+        print('Stuart ' + str(stevesDictionary['total']))
 
 if __name__ == '__main__':
     minion_game('BANANA')
