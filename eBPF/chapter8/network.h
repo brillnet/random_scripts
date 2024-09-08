@@ -30,8 +30,8 @@ static __always_inline unsigned short is_https_traffic(void *data,
     return 0;
 
   //  Checking to see if destination port is 443 and returning it.
-  if (ntohs(tcph->destination) == 443) {
-    return port;
+  if (ntohs(tcphdr->destination) == 443) {
+    return (tcphdr->destination);
   }
 
 }
