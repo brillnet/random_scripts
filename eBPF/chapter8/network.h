@@ -2,7 +2,6 @@
 #include <linux/if_ether.h>
 #include <linux/ip.h>
 #include <linux/tcp.h>
-#include <arpa/inet.h>
 
 
 
@@ -30,7 +29,7 @@ static __always_inline unsigned short is_https_traffic(void *data,
     return 0;
 
   //  Checking to see if destination port is 443 and returning it.
-  if (ntohs(tcphdr->destination) == 443) {
+  if (bpf_ntoh(tcphdr->destination) == 443) {
     return (tcphdr->destination);
   }
 
