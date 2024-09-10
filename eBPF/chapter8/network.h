@@ -3,7 +3,8 @@
 #include <linux/ip.h>
 #include <linux/tcp.h>
 
-
+// Remove the below include
+// #include <bcc/proto.h>
 
 static __always_inline unsigned short is_https_traffic(void *data,
                                                            void *data_end) {
@@ -28,11 +29,21 @@ static __always_inline unsigned short is_https_traffic(void *data,
       data_end)
     return 0;
 
-  //  Checking to see if destination port is 443 and returning it.
-  if (tcp->dest == 443) {
-    return (tcp->dest);
-  }
+  unsigned short int dest_port = bpf_ntohs(tcp->dest);
+  unsigned short int compare = 443;
 
+  unsigned short int whatever = 1000;
+
+  unsigned short int a = 1;
+  unsigned short int b = 2;
+
+  // return bpf_ntohs(tcp->dest);
+  // return b;
+
+  if (a > b) {
+    // return (tcp->dest);
+    return 33;
+  }
 }
 
 static __always_inline unsigned short is_icmp_ping_request(void *data,
