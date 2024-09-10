@@ -12,15 +12,9 @@ int xdp(struct xdp_md *ctx) {
         return XDP_PASS;
   }
 
-  // unsigned short a is_https_traffic(data, data_end);
-  bpf_trace_printk("Port: %u\n", is_https_traffic(data, data_end));
-
-  if (is_https_traffic(data, data_end)) {
-        bpf_trace_printk("Got https packet!");
-        return XDP_PASS;
+  if (tcp_src_port(data, data_end) == 443) {
+    bpf_trace_printk("Port: %u\n", tcp_src_port(data, data_end));
   }
-
-  
 
   return XDP_PASS;
 }

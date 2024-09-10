@@ -6,7 +6,8 @@ from time import sleep
 import sys
 
 b = BPF(src_file="ping.bpf.c")
-interface = "lo"
+# interface = "lo"
+interface = "enp1s0"
 
 # XDP will be the first program hit when a packet is received ingress
 fx = b.load_func("xdp", BPF.XDP)
