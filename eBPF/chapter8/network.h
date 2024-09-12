@@ -3,7 +3,7 @@
 #include <linux/ip.h>
 #include <linux/tcp.h>
 
-static __always_inline unsigned short tcp_src_port(void *data,
+static __always_inline unsigned short tcp_ingress_port(void *data,
                                                            void *data_end) {
   struct ethhdr *eth = data;
   if (data + sizeof(struct ethhdr) > data_end)
