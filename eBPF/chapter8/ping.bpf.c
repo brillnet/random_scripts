@@ -14,7 +14,7 @@ int xdp(struct xdp_md *ctx) {
 
   //  Dropping ingress traffic to tcp port 443.
   if (tcp_ingress_port(data, data_end) == 443) {
-    bpf_trace_printk("Dropped traffic to HTTPS port: %u\n", tcp_ingress_port(data, data_end));
+    bpf_trace_printk("Dropped traffic to HTTPS port: 443");
     return XDP_DROP;
   }
 
