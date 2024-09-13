@@ -33,15 +33,13 @@ print(len(up))  # -> k, where 0 <= k <= [interface count]
 b = BPF(src_file="network.bpf.c")
 fi = b.load_func("tc_pingpong", BPF.SCHED_CLS)
 
-enp1s0 = ipr.get_links(ifname="enp1s0")[0]
-
 #  Getting idx value of enp1s0
 interface = "enp1s0"
 links = ipr.link_lookup(ifname=interface)
 idx = links[0]
 
-ipr.tc("del", "clsact", 2)
-ipr.tc("add", "clsact", 2)
+ipr.tc("del", "clsact", idx)
+ipr.tc("add", "clsact", idx)
 
 # add ingress clsact
 ipr.tc("add-filter", "bpf", idx, ":1", fd=fi.fd, name="fi.name",
