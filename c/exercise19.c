@@ -32,12 +32,72 @@ int  sum (int count,...) {
 
 int min(int count,...) {
 
-    return 1;
+    int Min;
+    int Compared_value;
+ 
+    // Declaring pointer to the
+    // argument list
+    va_list ptr;
+
+ 
+    // Initializing argument to the
+    // list pointer
+    va_start(ptr, count);
+
+    //  Getting girst argument and initializing
+    //  it to smalled value.
+    Min = va_arg(ptr, int);
+ 
+    for (int i = 1; i < count; i++)
+
+        Compared_value = va_arg(ptr, int);
+
+        if (Min > Compared_value) {
+            // Setting new minium value
+            Min = Compared_value;
+        } 
+ 
+
+    // Ending argument list traversal
+    va_end(ptr);
+ 
+    //  Returning Min value.
+    return Min;
 }
 
 int max(int count,...) {
     
-    return 1;
+    int Max;
+    int Compared_value;
+ 
+    // Declaring pointer to the
+    // argument list
+    va_list ptr;
+
+ 
+    // Initializing argument to the
+    // list pointer
+    va_start(ptr, count);
+
+    //  Getting first argument and initializing
+    //  it to largest value.
+    Max = va_arg(ptr, int);
+ 
+    for (int i = 1; i < count; i++)
+
+        Compared_value = va_arg(ptr, int);
+
+        if (Max < Compared_value) {
+            // Setting new minium value
+            Max = Compared_value;
+        } 
+ 
+
+    // Ending argument list traversal
+    va_end(ptr);
+ 
+    //  Returning max value
+    return Max;
 
 }
 
