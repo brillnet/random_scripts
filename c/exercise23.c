@@ -16,10 +16,10 @@ int main()
         //  adding x to char 'A' doing this 26 times. This 
         // should get us every letter in the alphabet.
 
-        //   Incrementing the memory pointer by FOUR bytes
+        //   Incrementing the memory pointer by OBE bytes
         //   Remember when incrementing a pointer it will 
         //   increment by the default size of the data type
-        //   set for the pointer.
+        //   set for the pointer. In this case a char is one byte.
         *pn++=x+'A';
 
     }
