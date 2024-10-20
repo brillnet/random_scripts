@@ -14,9 +14,9 @@ int main()
     {
         //  Incremnting the value at pointer memory address 
         //  adding x to char 'A' doing this 26 times. This 
-        // should get us every letter in the alphabet.
+        //  should get us every letter in the alphabet.
 
-        //   Incrementing the memory pointer by OBE bytes
+        //   Incrementing the memory pointer by FOUR bytes
         //   Remember when incrementing a pointer it will 
         //   increment by the default size of the data type
         //   set for the pointer. In this case a char is one byte.
