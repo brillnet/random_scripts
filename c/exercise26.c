@@ -65,7 +65,7 @@ struct stk *make_structure(void)
         exit(1);
     }
 
-    return 0;
+    return(a);
 }
 
 void fill_structure(struct stk *a, int c)
