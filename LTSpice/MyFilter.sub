@@ -1,0 +1,5 @@
+.subckt MyFilter 1 2 3
+R1 2 3 1k
+L1 1 2 100m
+C1 2 3 100u
+.ends MyFilter
