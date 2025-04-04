@@ -1,0 +1,23 @@
+Circuit: * C:\users\none\Desktop\schematics\LTSpice\switched_psu.asc
+
+D4: both pins shorted together -- ignoring.
+WARNING: Node N007 is floating.
+
+.OP point found by inspection.
+
+Date: Thu Apr 03 22:57:41 2025
+Total elapsed time: 0.166 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3498
+traniter = 3498
+tranpoints = 1367
+accept = 1234
+rejected = 133
+matrix size = 14
+fillins = 4
+solver = Normal
+Matrix Compiler1: 1.05 KB object code size  0.2/0.2/[0.2]
+Matrix Compiler2: off
