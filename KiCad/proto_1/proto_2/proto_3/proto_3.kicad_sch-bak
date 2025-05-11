@@ -1498,7 +1498,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor-100uF-35V:CAP_6.3X11_RUB"
+		(property "Footprint" ""
 			(at 119.0752 49.53 0)
 			(effects
 				(font
@@ -1792,7 +1792,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor-4.7uH-60ohm:IND_BOURNS_RLB9012"
+		(property "Footprint" ""
 			(at 110.49 40.64 0)
 			(effects
 				(font
@@ -1930,7 +1930,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor-470uF-16V:CAP_RHT_8X11P5_NCH"
+		(property "Footprint" ""
 			(at 101.2952 49.53 0)
 			(effects
 				(font
@@ -2000,7 +2000,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor-10uF-450V:CAP_BX_10x20_RUB"
+		(property "Footprint" ""
 			(at 74.6252 50.8 0)
 			(effects
 				(font
