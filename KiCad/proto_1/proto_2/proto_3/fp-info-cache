@@ -1,4 +1,4 @@
-25226283128775705
+25242005221554046
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2785,6 +2785,41 @@ Gauge Massstab 100mm SilkScreenTop Type 2
 0
 0
 0
+Capacitor-,1uF-50V
+CAP_UEP_5X11_NCH
+
+UFW1H0R1MDD1TA 
+0
+2
+2
+Capacitor-1nF-400V
+CAP_DE2E3SA102MN3AY02F
+
+
+0
+2
+2
+Capacitor-10uF-450V
+CAP_BX_10x20_RUB
+
+450BXC10MEFC10X20 
+0
+2
+2
+Capacitor-100uF-35V
+CAP_6.3X11_RUB
+
+35ZLJ100M6.3X11 
+0
+2
+2
+Capacitor-470uF-16V
+CAP_RHT_8X11P5_NCH
+
+UFW1C471MPD 
+0
+2
+2
 Capacitor_SMD
 CP_Elec_3x5.3
 SMT capacitor, aluminium electrolytic, 3x5.3, Cornell Dubilier Electronics 
@@ -59191,6 +59226,13 @@ heatsink
 0
 0
 0
+Inductor-4.7uH-60ohm
+IND_BOURNS_RLB9012
+
+RLB9012-4R7ML 
+0
+2
+2
 Inductor_SMD
 L_6.3x6.3_H3
 Choke, SMD, 6.3x6.3mm 3mm height
@@ -91048,6 +91090,13 @@ SPST SPDT DC TE0598-P2
 0
 7
 7
+Resistor-300-3A
+res2_1-1625892-1_TEC
+
+ROX3SJ12R 
+0
+2
+2
 Resistor_SMD
 R_0201_0603Metric
 Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -101275,6 +101324,20 @@ Varistor VF
 0
 2
 2
+fuse_300V_1a
+FUSE_36911_LTF
+
+36911000000 
+0
+2
+2
+power
+Untitled
+
+
+0
+0
+0
 stuff
 Untitled_1
 
