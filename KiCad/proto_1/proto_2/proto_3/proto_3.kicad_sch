@@ -3211,7 +3211,7 @@
 				)
 			)
 		)
-		(property "Footprint" "stuff:power"
+		(property "Footprint" "stuff:transformer_MPL-05SC-F"
 			(at 141.224 111.506 0)
 			(effects
 				(font
