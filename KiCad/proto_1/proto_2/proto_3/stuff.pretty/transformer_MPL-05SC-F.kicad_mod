@@ -98,7 +98,7 @@
 		(remove_unused_layers no)
 		(uuid "6b9e68d7-e5a0-4990-bbbd-46a655843ba3")
 	)
-	(pad "6" thru_hole rect
+	(pad "5" thru_hole rect
 		(at 6.668 0)
 		(size 3 4)
 		(drill oval 2.5 2)
@@ -106,7 +106,7 @@
 		(remove_unused_layers no)
 		(uuid "4ec45b0a-5ed4-40e0-a6d7-159490fa36e3")
 	)
-	(pad "7" thru_hole rect
+	(pad "6" thru_hole rect
 		(at 10.668 0)
 		(size 3 4)
 		(drill oval 2.5 2)
