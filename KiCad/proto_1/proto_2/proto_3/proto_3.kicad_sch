@@ -1202,173 +1202,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:SM4003"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SM4003"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:D_MELF"
-				(at 0 -4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/A400/SMD1N400%23DIO.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "200V 1A General Purpose Rectifier Diode, MELF"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "D*MELF*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SM4003_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SM4003_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Fuse-300V-1A:36911000000"
 			(pin_names
 				(offset 0.254)
@@ -2439,12 +2272,192 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(junction
-		(at 186.69 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "01f2ea22-10f1-4c89-bc33-be4c275e8768")
+		(symbol "SMBJ-7A:DIODE"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset -1.651)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "CR"
+				(at 5.08 4.445 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "DIODE"
+				(at 5.08 -7.62 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "SMBJSeries_LTF"
+				(at 5.08 -9.144 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SMBJSeries_LTF SMBJSeries_LTF-M SMBJSeries_LTF-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DIODE_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 1.905) (xy 3.81 -1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.905) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 3.81 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -1.905) (xy 6.35 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 180)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 180)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 195.58 102.87)
@@ -2459,22 +2472,28 @@
 		(uuid "32025891-fa54-46da-a647-3d14ce0b01a3")
 	)
 	(junction
+		(at 186.69 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "320e03b9-3aad-430e-8a3c-99ce11fad789")
+	)
+	(junction
 		(at 180.34 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51a5eb3f-1e20-41d0-8e8d-feb4c837884a")
 	)
 	(junction
-		(at 186.69 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "543de229-bac4-4a5a-b19b-27b8d2595559")
-	)
-	(junction
 		(at 91.44 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c970e2b-9207-4488-a484-d6a466b12e7c")
+	)
+	(junction
+		(at 186.69 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "72e7cc61-2653-46ec-88f1-b4f4cd7850de")
 	)
 	(junction
 		(at 130.81 114.3)
@@ -2546,16 +2565,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 111.76) (xy 195.58 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15fcb174-5b79-4b8e-903f-dff14c3b49c3")
-	)
-	(wire
-		(pts
 			(xy 72.39 102.87) (xy 72.39 111.76)
 		)
 		(stroke
@@ -2596,6 +2605,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 111.76) (xy 195.58 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8676f6-8000-41c8-9aad-23c395276b4f")
+	)
+	(wire
+		(pts
 			(xy 195.58 111.76) (xy 205.74 111.76)
 		)
 		(stroke
@@ -2632,7 +2651,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2a4e363c-4214-4240-ae76-f879d6fb46a8")
+		(uuid "2ba7a8f6-8ae5-4b7c-a0af-d23d43d2efd0")
 	)
 	(wire
 		(pts
@@ -2653,6 +2672,16 @@
 			(type default)
 		)
 		(uuid "44669ec7-4b9f-4c7d-9dd0-5dd928a547c9")
+	)
+	(wire
+		(pts
+			(xy 186.69 102.87) (xy 195.58 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5338e11f-4578-4c3c-8779-5cdce4331a2b")
 	)
 	(wire
 		(pts
@@ -2766,16 +2795,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 102.87) (xy 186.69 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8eb3cb38-2b8f-4fab-85e3-077e6eba2305")
-	)
-	(wire
-		(pts
 			(xy 72.39 102.87) (xy 81.28 102.87)
 		)
 		(stroke
@@ -2783,16 +2802,6 @@
 			(type default)
 		)
 		(uuid "9190a7e7-e9d7-49ba-9f6f-6196bfaceb88")
-	)
-	(wire
-		(pts
-			(xy 186.69 110.49) (xy 186.69 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93063234-b0f5-4aec-b263-a89a06a4e614")
 	)
 	(wire
 		(pts
@@ -2856,7 +2865,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 102.87) (xy 195.58 102.87)
+			(xy 180.34 102.87) (xy 186.69 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2886,16 +2895,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 111.76) (xy 186.69 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c43953b3-b9ae-4413-ae05-f95a517e6a19")
-	)
-	(wire
-		(pts
 			(xy 91.44 102.87) (xy 90.17 102.87)
 		)
 		(stroke
@@ -2903,6 +2902,16 @@
 			(type default)
 		)
 		(uuid "c6eef79b-ef19-43f6-904a-965bb05ac6ba")
+	)
+	(wire
+		(pts
+			(xy 186.69 109.22) (xy 186.69 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca142820-ab3d-4120-9848-ff878c1f8142")
 	)
 	(wire
 		(pts
@@ -2943,6 +2952,16 @@
 			(type default)
 		)
 		(uuid "d8954faf-8027-4e12-8794-61f09cb937fe")
+	)
+	(wire
+		(pts
+			(xy 180.34 111.76) (xy 186.69 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc963edb-e4d8-4b9a-bc99-abf8eeecd819")
 	)
 	(wire
 		(pts
@@ -2993,6 +3012,16 @@
 			(type default)
 		)
 		(uuid "f18a278d-b099-41fe-9339-8b134d797e48")
+	)
+	(wire
+		(pts
+			(xy 186.69 101.6) (xy 186.69 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6399117-8fa4-42e9-8946-9a121d1223b9")
 	)
 	(wire
 		(pts
@@ -3359,93 +3388,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:SM4003")
-		(at 186.69 106.68 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5fddf144-2556-46bd-8ffb-eabf30b053d2")
-		(property "Reference" "TVS1"
-			(at 188.468 106.68 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "~"
-			(at 189.23 107.95 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_MELF"
-			(at 182.245 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/A400/SMD1N400%23DIO.pdf"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "200V 1A General Purpose Rectifier Diode, MELF"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "cf8fe011-6753-40f2-9453-ca229362040f")
-		)
-		(pin "1"
-			(uuid "1458aeb1-7ae4-4fac-b89b-ef09fd02dcff")
-		)
-		(instances
-			(project ""
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "TVS1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Power_Library:Power_Custom_Component")
 		(at 140.97 105.41 0)
 		(unit 1)
@@ -3592,6 +3534,75 @@
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SMBJ-7A:DIODE")
+		(at 186.69 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75d802b7-8493-421d-a538-20ded4a8b26a")
+		(property "Reference" "CR1"
+			(at 190.5 106.6291 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "DIODE"
+			(at 190.5 109.1691 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMBJSeries_LTF"
+			(at 195.834 106.68 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 111.76 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e5bb7963-a4fb-4159-9634-f3f932bae995")
+		)
+		(pin "1"
+			(uuid "7c864e34-a8b8-4449-93fe-2dc1978fd9d6")
+		)
+		(instances
+			(project ""
+				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
+					(reference "CR1")
 					(unit 1)
 				)
 			)
