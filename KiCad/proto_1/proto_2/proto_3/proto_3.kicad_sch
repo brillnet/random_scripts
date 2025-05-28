@@ -2272,38 +2272,39 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "TVS_CAP_sym:1.5KE6.8A"
+		(symbol "SMBJ-7A:DIODE"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016)
+				(offset -1.651)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at -5.0835 2.4159 0)
+			(property "Reference" "CR"
+				(at 5.08 4.445 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(justify left bottom)
 				)
 			)
-			(property "Value" "1.5KE6.8A"
-				(at -5.0854 -4.9611 0)
+			(property "Value" "DIODE"
+				(at 5.08 -7.62 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(justify left bottom)
 				)
 			)
-			(property "Footprint" "stuff:TVS_DIODE_9A"
-				(at 0 0 0)
+			(property "Footprint" "SMBJSeries_LTF"
+				(at 5.08 -9.144 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(justify bottom)
 					(hide yes)
 				)
 			)
@@ -2311,9 +2312,8 @@
 				(at 0 0 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
@@ -2325,54 +2325,23 @@
 					(hide yes)
 				)
 			)
-			(property "PARTREV" "O2104"
+			(property "ki_fp_filters" "SMBJSeries_LTF SMBJSeries_LTF-M SMBJSeries_LTF-L"
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "MANUFACTURER" "Taiwan Semiconductor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "5.6 mm"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "STANDARD" "IPC-7351B"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(symbol "1.5KE6.8A_0_0"
+			(symbol "DIODE_1_1"
 				(polyline
 					(pts
-						(xy -1.27 0) (xy -1.27 1.27)
+						(xy 2.54 0) (xy 3.4798 0)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
@@ -2380,11 +2349,11 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 0) (xy 1.27 -1.27)
+						(xy 3.175 0) (xy 3.81 0)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
@@ -2392,11 +2361,11 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 0)
+						(xy 3.81 1.905) (xy 3.81 -1.905)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
@@ -2404,11 +2373,11 @@
 				)
 				(polyline
 					(pts
-						(xy -0.635 -1.27) (xy -1.27 -1.27)
+						(xy 3.81 -1.905) (xy 6.35 0)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
@@ -2416,11 +2385,11 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy -1.27 0)
+						(xy 6.35 0) (xy 3.81 1.905)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
@@ -2428,48 +2397,60 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27)
+						(xy 6.35 0) (xy 7.62 0)
 					)
 					(stroke
-						(width 0.254)
-						(type default)
+						(width 0.2032)
+						(type solid)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 5.08)
+				(polyline
+					(pts
+						(xy 6.35 -1.905) (xy 6.35 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 180)
+					(length 0)
 					(name "~"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "C"
+					(number "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.4986 1.4986)
 							)
 						)
 					)
 				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 5.08)
+				(pin unspecified line
+					(at 0 0 180)
+					(length 0)
 					(name "~"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "A"
+					(number "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.4986 1.4986)
 							)
 						)
 					)
@@ -2489,6 +2470,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32025891-fa54-46da-a647-3d14ce0b01a3")
+	)
+	(junction
+		(at 186.69 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "320e03b9-3aad-430e-8a3c-99ce11fad789")
 	)
 	(junction
 		(at 180.34 102.87)
@@ -2545,12 +2532,6 @@
 		(uuid "99f0d1e8-ebdb-49bb-a747-9ac5aab9359f")
 	)
 	(junction
-		(at 186.69 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b2d73e1f-393f-46e3-b7ac-4c8870ecd5bc")
-	)
-	(junction
 		(at 154.94 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2581,16 +2562,6 @@
 			(type default)
 		)
 		(uuid "10669dc5-e23a-402f-bafb-ce68d88f6f78")
-	)
-	(wire
-		(pts
-			(xy 180.34 111.76) (xy 186.69 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15fcb174-5b79-4b8e-903f-dff14c3b49c3")
 	)
 	(wire
 		(pts
@@ -2634,6 +2605,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 111.76) (xy 195.58 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8676f6-8000-41c8-9aad-23c395276b4f")
+	)
+	(wire
+		(pts
 			(xy 195.58 111.76) (xy 205.74 111.76)
 		)
 		(stroke
@@ -2661,6 +2642,16 @@
 			(type default)
 		)
 		(uuid "2a2b2304-e4ec-4685-869d-93cc93c18ce7")
+	)
+	(wire
+		(pts
+			(xy 186.69 102.87) (xy 186.69 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ba7a8f6-8ae5-4b7c-a0af-d23d43d2efd0")
 	)
 	(wire
 		(pts
@@ -2914,6 +2905,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 109.22) (xy 186.69 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca142820-ab3d-4120-9848-ff878c1f8142")
+	)
+	(wire
+		(pts
 			(xy 148.59 109.22) (xy 148.59 111.76)
 		)
 		(stroke
@@ -2954,7 +2955,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 111.76) (xy 195.58 111.76)
+			(xy 180.34 111.76) (xy 186.69 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3317,117 +3318,6 @@
 		)
 	)
 	(symbol
-		(lib_id "TVS_CAP_sym:1.5KE6.8A")
-		(at 186.69 106.68 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3c87e439-6f0d-41f3-82e8-c9a649ba40cd")
-		(property "Reference" "D1"
-			(at 189.23 105.4099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TVS1"
-			(at 189.23 107.9499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "stuff:TVS_DIODE_9A"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" "O2104"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Taiwan Semiconductor"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "5.6 mm"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "IPC-7351B"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "C"
-			(uuid "c0690856-b9d9-4650-9c11-afbd1453c31b")
-		)
-		(pin "A"
-			(uuid "4f128e17-b5f7-45f2-abf1-4b64e76d3fa7")
-		)
-		(instances
-			(project ""
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Inductor-4.7uH/60ohm:RLB9012-4R7ML")
 		(at 161.29 102.87 0)
 		(unit 1)
@@ -3644,6 +3534,75 @@
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SMBJ-7A:DIODE")
+		(at 186.69 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75d802b7-8493-421d-a538-20ded4a8b26a")
+		(property "Reference" "CR1"
+			(at 190.5 106.6291 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "DIODE"
+			(at 190.5 109.1691 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMBJSeries_LTF"
+			(at 195.834 106.68 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 111.76 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e5bb7963-a4fb-4159-9634-f3f932bae995")
+		)
+		(pin "1"
+			(uuid "7c864e34-a8b8-4449-93fe-2dc1978fd9d6")
+		)
+		(instances
+			(project ""
+				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
+					(reference "CR1")
 					(unit 1)
 				)
 			)
