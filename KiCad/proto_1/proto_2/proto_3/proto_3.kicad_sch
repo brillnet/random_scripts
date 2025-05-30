@@ -3559,76 +3559,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Inductor-4.7uH/60ohm:RLB9012-4R7ML")
-		(at 161.29 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "464b78a2-55d4-4c97-ab5b-ee4d70985b91")
-		(property "Reference" "L2"
-			(at 168.91 96.52 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 168.91 99.06 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "Inductor-4.7uH-60ohm:IND_BOURNS_RLB9012"
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "RLB9012-4R7ML"
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "bf19ee0e-a0f1-4b01-8b77-db30c04ce2da")
-		)
-		(pin "1"
-			(uuid "f84ab269-4fd3-40a5-9f7b-3a7fe2b392d5")
-		)
-		(instances
-			(project ""
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "L2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Power_Library:Power_Custom_Component")
 		(at 140.97 105.41 0)
 		(unit 1)
@@ -3844,6 +3774,76 @@
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
 					(reference "CR1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Inductor-4.7uH/60ohm:RLB9012-4R7ML")
+		(at 161.29 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a8df3db-6ca5-489e-86f0-37559e3865f4")
+		(property "Reference" "L1"
+			(at 168.91 95.25 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "RLB9012-4R7ML"
+			(at 168.91 97.79 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "stuff:IND_RLB9012-4R7ML"
+			(at 161.29 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "RLB9012-4R7ML"
+			(at 161.29 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 161.29 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bed5a81b-afac-4af0-aea9-8e4bd285713d")
+		)
+		(pin "2"
+			(uuid "c7954245-9ee8-4820-bfa3-efbd25ddc4be")
+		)
+		(instances
+			(project ""
+				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
+					(reference "L1")
 					(unit 1)
 				)
 			)
