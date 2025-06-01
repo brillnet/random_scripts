@@ -356,6 +356,232 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "4.7mHInductor:AIUR-06-472K"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 6.985 5.08 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "AIUR-06-472K"
+				(at 6.985 -2.54 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "AIUR-06_ABR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "AIUR-06-472K"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "AIUR-06-472K"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "AIUR-06_ABR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AIUR-06-472K_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.54 1.27)
+					(mid 3.81 2.5344)
+					(end 5.08 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 5.08 1.27)
+					(mid 6.35 2.5344)
+					(end 7.62 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 7.62 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.62 1.27)
+					(mid 8.89 2.5344)
+					(end 10.16 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 0) (xy 10.16 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.16 1.27)
+					(mid 11.43 2.5344)
+					(end 12.7 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 0) (xy 12.7 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Capacitor-.1uf-50v:UFW1H0R1MDD1TA"
 			(pin_names
 				(offset 0.254)
@@ -2657,6 +2883,12 @@
 		(uuid "72e7cc61-2653-46ec-88f1-b4f4cd7850de")
 	)
 	(junction
+		(at 113.03 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c43d53c-6571-4462-a5cb-5ae8e11e9d24")
+	)
+	(junction
 		(at 130.81 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2667,12 +2899,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7fb85162-1cab-497d-bc4d-f4918a36e080")
-	)
-	(junction
-		(at 113.03 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "89eba333-6d52-4c0e-ad37-03e015051d4b")
 	)
 	(junction
 		(at 180.34 111.76)
@@ -2746,7 +2972,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 102.87) (xy 107.95 102.87)
+			(xy 107.95 102.87) (xy 113.03 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2826,16 +3052,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 102.87) (xy 113.03 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39ed7b4c-c06a-410c-bea9-fdd0d9fd6133")
-	)
-	(wire
-		(pts
 			(xy 66.04 114.3) (xy 66.04 135.89)
 		)
 		(stroke
@@ -2863,6 +3079,16 @@
 			(type default)
 		)
 		(uuid "45fc6652-3499-49b3-9255-2fdbf92c7347")
+	)
+	(wire
+		(pts
+			(xy 113.03 102.87) (xy 114.3 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c239e3d-2b27-451e-9a66-449881a10421")
 	)
 	(wire
 		(pts
@@ -3275,7 +3501,7 @@
 		(uuid "ff87f0fa-81c7-48a4-bc71-5a86d2ed0d50")
 	)
 	(symbol
-		(lib_id "Inductor-4.7uH/60ohm:RLB9012-4R7ML")
+		(lib_id "4.7mHInductor:AIUR-06-472K")
 		(at 113.03 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3283,8 +3509,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "023db089-4596-40ef-8461-0cd0e566da00")
-		(property "Reference" "LDM1"
+		(uuid "0dac06ba-b8d3-484f-9ddd-451eb16842cf")
+		(property "Reference" "LDM"
 			(at 120.65 96.52 0)
 			(effects
 				(font
@@ -3300,7 +3526,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor-4.7uH-60ohm:IND_BOURNS_RLB9012"
+		(property "Footprint" "AIUR-06_ABR"
 			(at 113.03 102.87 0)
 			(effects
 				(font
@@ -3310,7 +3536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "RLB9012-4R7ML"
+		(property "Datasheet" "AIUR-06-472K"
 			(at 113.03 102.87 0)
 			(effects
 				(font
@@ -3329,16 +3555,16 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "c758a294-0f3a-40f1-967f-fdb99b25de9f")
-		)
 		(pin "1"
-			(uuid "55148888-57f2-4fac-aff7-cd48fe14cd65")
+			(uuid "7b4a4f68-bc07-4f34-94ac-566a54206511")
+		)
+		(pin "2"
+			(uuid "dd167cd7-ed42-42e8-98b2-ff15d8fcdab4")
 		)
 		(instances
-			(project "proto_3"
+			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "LDM1")
+					(reference "LDM")
 					(unit 1)
 				)
 			)
