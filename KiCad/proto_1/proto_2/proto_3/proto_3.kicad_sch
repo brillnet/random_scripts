@@ -1589,6 +1589,144 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SM6T6V8A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SM6T6V8A"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMB"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm6t.pdf"
+				(at -1.27 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 6.8Vrwm, DO-214AA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode TVS voltage suppressor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SMB*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SM6T6V8A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SM6T6V8A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Fuse-300V-1A:36911000000"
 			(pin_names
 				(offset 0.254)
@@ -2169,23 +2307,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 0 5.334 0)
+			(property "Reference" "U1"
+				(at -0.254 5.588 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "~"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "stuff:power"
+			(property "Footprint" "stuff:transformer_MPL-05SC-F"
 				(at 0.254 -6.096 0)
 				(effects
 					(font
@@ -2230,14 +2368,14 @@
 					(name "AC(L)"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2248,14 +2386,14 @@
 					(name "+V(cap)"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2266,14 +2404,14 @@
 					(name "-V(cap)"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2284,14 +2422,14 @@
 					(name "AC(N)"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2302,14 +2440,14 @@
 					(name "+Vo"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "6"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2320,14 +2458,14 @@
 					(name "-Vo"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.635 0.635)
 							)
 						)
 					)
 					(number "5"
 						(effects
 							(font
-								(size 0.381 0.381)
+								(size 0.889 0.889)
 							)
 						)
 					)
@@ -2659,198 +2797,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SMBJ-7A:DIODE"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset -1.651)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "CR"
-				(at 5.08 4.445 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "DIODE"
-				(at 5.08 -7.62 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "SMBJSeries_LTF"
-				(at 5.08 -9.144 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SMBJSeries_LTF SMBJSeries_LTF-M SMBJSeries_LTF-L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "DIODE_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.4798 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 0) (xy 3.81 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 1.905) (xy 3.81 -1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -1.905) (xy 6.35 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 0) (xy 3.81 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 0) (xy 7.62 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 -1.905) (xy 6.35 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 180)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 180)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
-		(at 195.58 102.87)
+		(at 187.96 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3044ff76-819d-40ed-a525-109ba0fbe9e2")
+		(uuid "0d3a618c-b2ab-44df-9409-6f2ef6607ca6")
 	)
 	(junction
 		(at 107.95 102.87)
@@ -2859,10 +2811,10 @@
 		(uuid "32025891-fa54-46da-a647-3d14ce0b01a3")
 	)
 	(junction
-		(at 186.69 111.76)
+		(at 187.96 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "320e03b9-3aad-430e-8a3c-99ce11fad789")
+		(uuid "3540d190-d22c-4d1c-a6cd-93c4a33334fc")
 	)
 	(junction
 		(at 180.34 102.87)
@@ -2875,12 +2827,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c970e2b-9207-4488-a484-d6a466b12e7c")
-	)
-	(junction
-		(at 186.69 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "72e7cc61-2653-46ec-88f1-b4f4cd7850de")
 	)
 	(junction
 		(at 113.03 102.87)
@@ -2925,10 +2871,16 @@
 		(uuid "ba959836-5f68-4aee-8754-e0bc32dcb650")
 	)
 	(junction
-		(at 195.58 111.76)
+		(at 199.39 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "be93819b-8a0b-4347-84c7-46a26bc51983")
+		(uuid "d7e2a004-fa98-42bd-9170-45009f6a4132")
+	)
+	(junction
+		(at 199.39 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e88eef10-36ea-4f47-96f6-a5edee595857")
 	)
 	(wire
 		(pts
@@ -2942,6 +2894,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 111.76) (xy 199.39 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "073d2e8f-ba3a-4ff9-a75e-615bc23ec67e")
+	)
+	(wire
+		(pts
 			(xy 133.35 107.95) (xy 133.35 114.3)
 		)
 		(stroke
@@ -2949,6 +2911,16 @@
 			(type default)
 		)
 		(uuid "10669dc5-e23a-402f-bafb-ce68d88f6f78")
+	)
+	(wire
+		(pts
+			(xy 187.96 102.87) (xy 199.39 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12ffb72d-1d42-4d8d-8d9b-bee94984ef17")
 	)
 	(wire
 		(pts
@@ -3002,13 +2974,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 111.76) (xy 195.58 111.76)
+			(xy 187.96 110.49) (xy 187.96 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1f8676f6-8000-41c8-9aad-23c395276b4f")
+		(uuid "1fff3e88-8f2a-49c0-898f-f95732f15fd3")
 	)
 	(wire
 		(pts
@@ -3032,6 +3004,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 110.49) (xy 199.39 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a07d2ed-e750-402a-b16a-10cda58c3689")
+	)
+	(wire
+		(pts
 			(xy 154.94 102.87) (xy 154.94 105.41)
 		)
 		(stroke
@@ -3042,13 +3024,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 102.87) (xy 186.69 104.14)
+			(xy 199.39 111.76) (xy 201.93 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2ba7a8f6-8ae5-4b7c-a0af-d23d43d2efd0")
+		(uuid "2d954139-ef39-40e5-b79a-c3fcdbb75925")
 	)
 	(wire
 		(pts
@@ -3072,16 +3054,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 111.76) (xy 201.93 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45fc6652-3499-49b3-9255-2fdbf92c7347")
-	)
-	(wire
-		(pts
 			(xy 113.03 102.87) (xy 114.3 102.87)
 		)
 		(stroke
@@ -3089,16 +3061,6 @@
 			(type default)
 		)
 		(uuid "4c239e3d-2b27-451e-9a66-449881a10421")
-	)
-	(wire
-		(pts
-			(xy 186.69 102.87) (xy 195.58 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5338e11f-4578-4c3c-8779-5cdce4331a2b")
 	)
 	(wire
 		(pts
@@ -3129,16 +3091,6 @@
 			(type default)
 		)
 		(uuid "57081785-93ac-495e-9d48-0a456a1be769")
-	)
-	(wire
-		(pts
-			(xy 195.58 102.87) (xy 195.58 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "660c17af-1608-4458-9c51-75a47e70fd66")
 	)
 	(wire
 		(pts
@@ -3272,6 +3224,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 102.87) (xy 187.96 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a632ff4-fdd4-477c-b11f-b780f5df71b3")
+	)
+	(wire
+		(pts
 			(xy 107.95 102.87) (xy 105.41 102.87)
 		)
 		(stroke
@@ -3332,13 +3294,13 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 102.87) (xy 186.69 102.87)
+			(xy 199.39 102.87) (xy 199.39 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b5e1d369-51d5-4b35-9c33-81ae20bd57eb")
+		(uuid "b9b5f67c-dcee-4e85-b0e5-26c9f3bb1446")
 	)
 	(wire
 		(pts
@@ -3382,16 +3344,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 109.22) (xy 186.69 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca142820-ab3d-4120-9848-ff878c1f8142")
-	)
-	(wire
-		(pts
 			(xy 148.59 109.22) (xy 148.59 111.76)
 		)
 		(stroke
@@ -3399,16 +3351,6 @@
 			(type default)
 		)
 		(uuid "d189b604-04c4-4953-a143-b997b8b9462b")
-	)
-	(wire
-		(pts
-			(xy 195.58 102.87) (xy 204.47 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d326946c-63bf-44e1-ba5a-64b43ee85197")
 	)
 	(wire
 		(pts
@@ -3432,7 +3374,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 111.76) (xy 186.69 111.76)
+			(xy 180.34 111.76) (xy 187.96 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3462,16 +3404,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 110.49) (xy 195.58 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e44921a8-98a8-4b2d-b474-c35ed2d86f6a")
-	)
-	(wire
-		(pts
 			(xy 204.47 102.87) (xy 204.47 111.76)
 		)
 		(stroke
@@ -3482,13 +3414,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 101.6) (xy 186.69 102.87)
+			(xy 199.39 102.87) (xy 204.47 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f6399117-8fa4-42e9-8946-9a121d1223b9")
+		(uuid "f2f8d112-93fc-4a82-8c9a-27d16b987010")
 	)
 	(wire
 		(pts
@@ -3508,10 +3440,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0dac06ba-b8d3-484f-9ddd-451eb16842cf")
-		(property "Reference" "LDM"
-			(at 120.65 96.52 0)
+		(property "Reference" "LDM1"
+			(at 120.65 98.298 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3564,7 +3495,77 @@
 		(instances
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "LDM")
+					(reference "LDM1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SM6T6V8A")
+		(at 187.96 106.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1437cd3f-b21b-42ad-9504-9530198a9614")
+		(property "Reference" "D1"
+			(at 183.896 106.426 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SM6T6V8A"
+			(at 190.5 107.9499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "stuff:TVS_DIODE_NEW"
+			(at 182.88 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm6t.pdf"
+			(at 187.96 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 6.8Vrwm, DO-214AA"
+			(at 187.96 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2591e44a-9139-411b-b3db-74005f9752b2")
+		)
+		(pin "2"
+			(uuid "e8349112-4a7c-4b77-89c7-240126ea5342")
+		)
+		(instances
+			(project ""
+				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -3572,7 +3573,7 @@
 	)
 	(symbol
 		(lib_id "Capacitor-.1uf-50v:UFW1H0R1MDD1TA")
-		(at 195.58 102.87 270)
+		(at 199.39 104.14 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3580,7 +3581,7 @@
 		(dnp no)
 		(uuid "236d5033-91e0-42cb-ab56-53534ce1276c")
 		(property "Reference" "C4"
-			(at 198.12 106.934 90)
+			(at 194.31 106.426 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3589,7 +3590,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 199.39 107.1753 90)
+			(at 203.2 108.4453 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3598,7 +3599,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor-,1uF-50V:CAP_UEP_5X11_NCH"
-			(at 195.58 102.87 0)
+			(at 199.39 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3608,7 +3609,7 @@
 			)
 		)
 		(property "Datasheet" "UFW1H0R1MDD1TA"
-			(at 195.58 102.87 0)
+			(at 199.39 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3618,7 +3619,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 195.58 102.87 0)
+			(at 199.39 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3723,7 +3724,7 @@
 		(dnp no)
 		(uuid "2f2b6feb-0618-4655-a65c-b56cdd1593a0")
 		(property "Reference" "C2"
-			(at 152.146 106.426 90)
+			(at 152.654 106.426 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3792,10 +3793,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6337cd24-79ab-4c13-b4ad-871d39cd63bf")
 		(property "Reference" "U1"
-			(at 140.97 97.79 0)
+			(at 140.716 99.822 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3937,75 +3937,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SMBJ-7A:DIODE")
-		(at 186.69 111.76 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "75d802b7-8493-421d-a538-20ded4a8b26a")
-		(property "Reference" "CR1"
-			(at 190.5 106.6291 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "DIODE"
-			(at 190.5 109.1691 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "stuff:SMBJ7.0A"
-			(at 195.834 106.68 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 111.76 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e5bb7963-a4fb-4159-9634-f3f932bae995")
-		)
-		(pin "1"
-			(uuid "7c864e34-a8b8-4449-93fe-2dc1978fd9d6")
-		)
-		(instances
-			(project ""
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "CR1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Inductor-4.7uH/60ohm:RLB9012-4R7ML")
 		(at 161.29 102.87 0)
 		(unit 1)
@@ -4013,18 +3944,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7a8df3db-6ca5-489e-86f0-37559e3865f4")
 		(property "Reference" "L1"
-			(at 168.91 95.25 0)
+			(at 168.91 98.044 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Value" "RLB9012-4R7ML"
-			(at 168.91 97.79 0)
+		(property "Value" "~"
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.524 1.524)
