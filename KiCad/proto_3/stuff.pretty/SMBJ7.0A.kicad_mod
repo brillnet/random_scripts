@@ -6,6 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 0 0)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "b4484d70-bd05-4851-8f0a-e585d8d4648e")
 		(effects
 			(font
@@ -17,6 +18,7 @@
 	(property "Value" "SMBJSeries_LTF"
 		(at 0 0 0)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "062e6ba9-bd4a-4e46-b91d-1c86d3945428")
 		(effects
 			(font
