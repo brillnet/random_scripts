@@ -627,6 +627,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "AC:AC_(L)"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AC_(L)_0_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.54)
+					(end -3.81 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AC_(L)_1_1"
+				(text "AC (L)"
+					(at 0.254 -1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AC:AC_(N)"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AC_(N)_0_1"
+				(rectangle
+					(start -3.81 0)
+					(end 3.81 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -3.81) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AC_(N)_1_1"
+				(text "AC (N)"
+					(at 0 -1.016 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Capacitor-.1uf-50v:UFW1H0R1MDD1TA"
 			(pin_names
 				(offset 0.254)
@@ -2967,142 +3149,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:AC"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "AC"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"AC\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AC_0_1"
-				(arc
-					(start -1.27 3.175)
-					(mid -0.635 3.8073)
-					(end 0 3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 3.175)
-					(radius 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.27 3.175)
-					(mid 0.635 2.5427)
-					(end 0 3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AC_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -3313,12 +3359,6 @@
 		(uuid "32025891-fa54-46da-a647-3d14ce0b01a3")
 	)
 	(junction
-		(at 224.79 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3ea3e30c-8065-4add-a9c8-8784c417979b")
-	)
-	(junction
 		(at 215.9 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3335,12 +3375,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c970e2b-9207-4488-a484-d6a466b12e7c")
-	)
-	(junction
-		(at 76.2 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7aafc3b2-01a6-4f92-9209-2663b7184d0a")
 	)
 	(junction
 		(at 119.38 92.71)
@@ -3383,12 +3417,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "99f0d1e8-ebdb-49bb-a747-9ac5aab9359f")
-	)
-	(junction
-		(at 76.2 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9b25343e-ad63-4187-9032-778df2622744")
 	)
 	(junction
 		(at 224.79 96.52)
@@ -3458,16 +3486,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 92.71) (xy 76.2 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "180d8dba-0a08-4530-9a6a-477fb1f79941")
-	)
-	(wire
-		(pts
 			(xy 114.3 92.71) (xy 119.38 92.71)
 		)
 		(stroke
@@ -3525,16 +3543,6 @@
 			(type default)
 		)
 		(uuid "2a2b2304-e4ec-4685-869d-93cc93c18ce7")
-	)
-	(wire
-		(pts
-			(xy 72.39 95.25) (xy 76.2 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3851f930-5fe2-44e1-b612-1e8cd38480d0")
 	)
 	(wire
 		(pts
@@ -3628,16 +3636,6 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 99.06) (xy 226.06 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8543975e-ab5a-4f9b-960b-b0f3379f28eb")
-	)
-	(wire
-		(pts
 			(xy 142.24 100.33) (xy 142.24 106.68)
 		)
 		(stroke
@@ -3658,7 +3656,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 92.71) (xy 87.63 92.71)
+			(xy 72.39 92.71) (xy 87.63 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3678,7 +3676,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 99.06) (xy 224.79 99.06)
+			(xy 215.9 99.06) (xy 226.06 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3778,7 +3776,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 95.25) (xy 81.28 95.25)
+			(xy 72.39 95.25) (xy 81.28 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3945,72 +3943,6 @@
 			(type default)
 		)
 		(uuid "ff87f0fa-81c7-48a4-bc71-5a86d2ed0d50")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 224.79 99.06 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0012115f-5cbe-48a7-ad8f-e96884ae3494")
-		(property "Reference" "#FLG02"
-			(at 224.79 100.965 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 224.79 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 224.79 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 224.79 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e6117764-b3ac-4eb1-897c-a1057f80d5ea")
-		)
-		(instances
-			(project "proto_3"
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "4.7mHInductor:AIUR-06-472K")
@@ -4370,17 +4302,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:AC")
-		(at 76.2 92.71 0)
+		(lib_id "AC:AC_(N)")
+		(at 74.93 100.33 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3ce7cd94-1886-4951-9767-6a34b5a3acd5")
-		(property "Reference" "#PWR01"
-			(at 76.2 95.25 0)
+		(uuid "2f4accd1-6234-404d-82fc-85f511fd4b1f")
+		(property "Reference" "U2"
+			(at 74.93 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4388,16 +4320,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "AC"
-			(at 76.2 85.09 0)
+		(property "Value" "~"
+			(at 80.01 97.7928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 92.71 0)
+			(at 74.93 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4406,7 +4339,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 92.71 0)
+			(at 74.93 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4414,22 +4347,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"AC\""
-			(at 76.2 92.71 0)
+		(property "Description" ""
+			(at 74.93 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "cfc8c974-8e92-4370-a444-2978fe4ebf78")
 		)
 		(instances
-			(project "proto_3"
+			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "#PWR01")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -4655,6 +4585,70 @@
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AC:AC_(L)")
+		(at 74.93 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71962c7e-110e-4988-b771-6ff1d68be71e")
+		(property "Reference" "AC(L)1"
+			(at 74.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 80.01 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 74.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 74.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "proto_3"
+				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
+					(reference "AC(L)1")
 					(unit 1)
 				)
 			)
@@ -5034,72 +5028,6 @@
 			(project ""
 				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:AC")
-		(at 76.2 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "af0f366b-3ef2-4bdf-96a5-5c3e1969c177")
-		(property "Reference" "#PWR04"
-			(at 76.2 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "AC"
-			(at 76.2 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"AC\""
-			(at 76.2 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "12761423-b8a7-4a82-abd5-44070d1de81b")
-		)
-		(instances
-			(project "proto_3"
-				(path "/3ba3c426-0aff-4728-abf4-4c9cd318aec8"
-					(reference "#PWR04")
 					(unit 1)
 				)
 			)
