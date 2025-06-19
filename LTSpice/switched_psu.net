@@ -1,0 +1,22 @@
+* C:\users\none\Desktop\schematics\LTSpice\switched_psu.asc
+V1 Vin 0 SINE(0 120 60)
+R1 Vin N003 .01
+D1 N003 Vout MBRS340
+D2 0 Vout MBRS340
+D3 0 N003 MBRS340
+D4 0 0 MBRS340
+C1 Vout 0 10µF
+L1 N006 Vout 100µ
+L2 N001 N007 1µ
+D5 N001 N002 D
+R2 N004 N006 1
+D6 N004 Vout D
+C3 N004 N006 1µF
+C2 N002 N007 1µF
+C4 N002 N007 1µF
+.model D D
+.lib C:\users\none\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 150m startup
+K1 L1 L2 1
+.backanno
+.end
