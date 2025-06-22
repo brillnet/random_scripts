@@ -1,0 +1,13 @@
+Selecting WLC
+
+If AP previously joined controller it will try that one.
+If AP has been configured for primary, secondary it will
+try to join those in that order.
+If AP does not know candidate it tries to discover one.
+AP connects to join least loaded controller.
+
+Pneumonic
+AP flips through a memory photos and look things about an old controller.
+Knocks on primary and secondary doors
+Pulls out binoculars to scout 
+Joins the WLC that is the lightest to lift.

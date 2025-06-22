@@ -1,0 +1,63 @@
+AP Operation
+
+Local - Default lightweight mode. Serves wireless clients.
+When not transmitting scans for rogue devcies, checks IDS
+for events.
+
+FlexConnect - Has tunnel back to WLC. Can do local switching
+of client traffic.
+
+Monitor - Does not transmit. Only receives. Checks for IDS events and rogue APs, etc.
+
+Sniffer - Receives 802.11 traffic from other sources. Captures
+traffic and forwards it to PC running network analyzer.
+
+Rogue Detector - Detects rogue devices by correlating MAC heard
+on wireless network with MAC heard on wired network. 
+
+Bridge - Mode to link two APs together.
+
+Flex Bridge - Enabled on mesh AP. Can do local switching
+and be centrally managed by WLC.
+
+SE-Connect - AP dedicates its radios to spectrum analysis.
+Can analyze data for sources of interference.
+
+Memory Palace - Kitchen - Microwave, Sink, Stove, Refrigerator,
+Garbage Can, Window 1, Window 2, Counter
+
+Open the microwave, and inside is the AP robot reclining in a plush “DEFAULT LOCAL MODE” lounge chair. A sign on the door of the microwave reads:
+
+    🪧 “Welcome to Local Mode: Lightweight + Default”
+
+The robot wears a server apron, holding a tray of mini-laptops, cheerfully handing out Wi-Fi beams like snacks to them.
+
+Then, when no laptops are near, the robot switches to surveillance mode: it slides on spy goggles, pulls out a radar dish, and says: "No clients nearby. Time to scan for rogues and check IDS events."
+
+At the sink, the AP robot wears a plumber’s shirt labeled “FLEXCONNECT.” It's juggling two hoses: one tunnel squirts water to a distant WLC marked “HQ,” and another hose splashes water into a local pot.
+
+The stove is cold. The AP robot sits cross-legged in meditation with headphones on, wearing a black hoodie labeled “MONITOR.”
+Around it are sticky notes: “I see rogue APs. I detect intrusions.”It whispers: “I’m in Monitor mode. I only listen.”
+
+Open the fridge, and a glowing sign reads “SNIFFER Lab.” Inside, the AP robot wears a lab coat and uses a vacuum labeled “Sniffer 802.11 Capture Unit.”
+It sucks in Wi-Fi packets, labels them, and tubes them to a laptop marked “Analyzer.”
+
+The garbage can is now a high-tech device labeled “ROGUE DETECTOR 3000.” The AP robot tosses in a device, and a red alert pops up:
+
+The AP robot writes “BRIDGE MODE ACTIVE” in the air with laser paint. Through Window 1, two APs hold opposite ends of a glowing data bridge.
+One says to the other: “In Bridge mode, we link worlds!”
+
+Above Window 2, a glowing banner reads “FLEX BRIDGE MODE.” A mesh AP, wearing a toolbelt, swings by on a web labeled “Mesh Link” and plugs a LAN cable into a switch labeled “Local.”
+
+On the counter, there's a glowing console labeled “SE-CONNECT Spectrum Station.” The AP robot wears a lab coat with “SE-Connect” on the back and waves a wand over the surface as waveforms rise.
+
+
+Summary
+Microwave – Local: Spa with “LOCAL mode” sign
+Sink – FlexConnect: Dual water flows, shirt says “FLEXCONNECT”
+Stove – Monitor: Silent listening with “MONITOR” hoodie
+Fridge – Sniffer: Vacuuming packets in “SNIFFER Lab”
+Garbage Can – Rogue Detector: High-tech trash scan “ROGUE DETECTOR 3000”
+Window 1 – Bridge: APs writing “BRIDGE MODE ACTIVE”
+Window 2 – Flex Bridge: Swinging mesh AP with “FLEX BRIDGE MODE”
+Counter – SE-Connect: Spectrum lab labeled “SE-CONNECT”
