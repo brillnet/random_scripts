@@ -1,0 +1,25 @@
+Memory Palace - Sink, Mirror, Toilet, Shower, Towel Hanger
+
+At the sink, the AP robot is washing its hands, but it's constantly stepping from one rug to another right beneath it—each rug marked with a different AP name, but all connected to the same subnet.
+As it steps, nothing else changes—no disruption, no new IP address. A big sign on the faucet reads:
+
+
+The mirror becomes a portal to a different bathroom, and every time the AP robot steps into it, it finds itself in a completely different subnet—with a glowing new IP address popping up above its head.
+A "mobility anchor" device floats above the mirror like a guardian, holding a clipboard that tracks the robot’s identity so it can still get packets from the original network.
+
+
+The toilet is now labeled “Mobility Group HQ”, and around it are rubber duck AP robots, each wearing matching team jerseys that say "Group A".
+Whenever one duck leaves and another enters, they give each other secret handshakes, showing they trust each other and can exchange client state info.
+
+The shower becomes a WiFi signal chamber, with a single AP mounted on the wall shooting a weak laser to a rubber duck on the drain.
+The AP says, “I know it’s nearby, but I can’t tell where exactly.”
+Then suddenly, two more APs appear around the tub, triangulating the duck's location like GPS satellites. The duck yells:
+
+Hanging on each towel is a unique RF signature print, like a heat map. The AP robot walks by scanning them with a radio magnifying glass, comparing the real-time signal map to a stored digital fingerprint of the environment.
+
+Recap
+Sink	Layer 2 Roaming	Stepping between rugs, same water = same subnet
+Mirror	Layer 3 Roaming	Mirror portal to new subnet, tracked by anchor
+Toilet	Mobility Groups	Rubber duck APs in matching jerseys, exchanging handshakes
+Shower	Locate via RSS (1 vs. 3 APs)	One AP = vague signal, 3 APs = precise triangulation
+Towel Hanger	RF Fingerprinting	Each towel = unique RF signature; robot scans to find a match

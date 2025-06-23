@@ -1,0 +1,63 @@
+Authenticating Wireless Clients
+
+Memory Palace - Door way, TV, Bed,
+
+Authenticating with pre-shared keys
+The doorway to the room has three glowing locks stacked vertically on the door frame:
+
+    A bronze lock labeled “WPA”
+    A silver lock labeled “WPA2”
+    A gold lock labeled “WPA3”
+
+Beside each lock is a split button, labeled:
+    🔑 PSK
+    🧠 802.1X
+
+The AP robot chooses the PSK path first—it types a passphrase on a glowing keypad. The door opens—but just then, a shadowy hacker figure behind a bush points a big antenna dish labeled “Handshake Sniffer” at the doorway.
+
+He gleefully collects a glowing WPA2 handshake token from the air and tosses it into a password cracker machine that spits out the original PSK. A warning sign appears:
+    “⚠️ WPA/WPA2 PSK handshake can be captured and cracked!”
+
+Then the AP tries the WPA3 PSK lock. It enters the passphrase—but this time, the handshake explodes into confetti when the hacker tries to grab it.
+
+The hacker yells:
+    “Wha—? It’s encrypted! I can’t crack this!”
+A banner unfurls over the doorway:
+    “WPA3: Forward Secrecy. Safer Handshakes.”
+
+***
+
+EAP Authentication
+	The TV screen is playing a flashy game show called “Who Wants to Be Authenticated?”
+
+On stage:
+    A nervous client laptop wearing a name tag: “Supplicant”
+    A tall, shiny AP robot in a suit stands next to it with a tag: “Authenticator”
+    And behind a glowing podium is a stern RADIUS server, wearing glasses and labeled: “Authentication Server”
+
+The host (Authenticator) speaks into the mic:
+    “Okay Supplicant, to access the network, you'll need to prove who you are!”
+The Supplicant answers identity questions, which the Authenticator relays to the Authentication Server behind the scenes.
+
+As the answers go back and forth, the screen flashes big glowing arrows labeled:
+
+    “EAP Request → Identity”
+    “EAP Response → Identity”
+    “Access-Accept!”
+
+***
+Four Way EAPOL Handshake
+ The Four Steps (visualized as moves):
+
+    AP sends ANonce
+    → The AP throws a glowing challenge orb (ANonce) across the ring.
+
+    Client responds with SNonce + MIC
+    → The client catches it and returns a blue orb (SNonce) and a handshake signature (MIC)—like a dance spin.
+
+    AP sends GTK + confirmation MIC
+    → The AP opens a treasure chest with the Group Temporal Key (GTK) and tosses it to the client with another signature stamp.
+
+    Client sends final ACK
+    → The client bows deeply in acknowledgment and fires a laser beam labeled “Install Keys” into the air.
+***
