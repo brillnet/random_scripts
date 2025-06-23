@@ -1,0 +1,213 @@
+(footprint "transformer_MPL-05SC-F_new"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -10.16 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3467236f-e0c0-480b-a7e8-cdf0dd33cc2c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Transformer"
+		(at 0 -15.24 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b953da17-cbcb-4e1a-a67c-447ec9844fdf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da090453-cb76-487c-9c99-2c21c0b54422")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ebfcabe0-19dd-45f4-b821-00bc4d2d2c42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1 -2)
+		(end -1 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f59c93ae-ffd5-4dc4-9f0c-9939b61d53ee")
+	)
+	(fp_line
+		(start 1 2)
+		(end 1 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "beade66a-36a1-4cd8-9de4-5ba22493ebdb")
+	)
+	(fp_line
+		(start 4 -2)
+		(end 4 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "9ac54038-8148-4da7-8625-dfe68b2b8674")
+	)
+	(fp_line
+		(start 6 2)
+		(end 6 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "8d49f203-dae2-4589-9a53-a9b51631bfb5")
+	)
+	(fp_arc
+		(start -1 -2)
+		(mid 0 -3)
+		(end 1 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "310d07d5-157d-480d-aae8-6f3e667f819f")
+	)
+	(fp_arc
+		(start 1 2)
+		(mid 0 3)
+		(end -1 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2186b52d-b418-44a9-b4e4-ede09c2771d6")
+	)
+	(fp_arc
+		(start 4 -2)
+		(mid 5 -3)
+		(end 6 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "85caf3e2-d6ee-4ed2-aced-6c30104541ed")
+	)
+	(fp_arc
+		(start 6 2)
+		(mid 5 3)
+		(end 4 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "efa47091-ec7b-4a20-8bc0-0abcc4332da0")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -12.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ec04d819-dffd-4167-93b8-ecf325d01fca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -13.6 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cfbc1475-68a1-4362-a452-1585593868c7")
+	)
+	(pad "2" thru_hole rect
+		(at -9.6 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "464c7ae4-b71b-4330-a7b7-450b3f3a1c15")
+	)
+	(pad "3" thru_hole rect
+		(at -5.6 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "18c0cd99-3f7a-421b-bbbb-7e7ebc907440")
+	)
+	(pad "4" thru_hole rect
+		(at -1.6 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6b9e68d7-e5a0-4990-bbbd-46a655843ba3")
+	)
+	(pad "5" thru_hole rect
+		(at 6.668 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4ec45b0a-5ed4-40e0-a6d7-159490fa36e3")
+	)
+	(pad "6" thru_hole rect
+		(at 10.668 0)
+		(size 3 4)
+		(drill oval 2.5 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "db94fa9a-1cbf-4465-9448-00bc7d67066f")
+	)
+	(embedded_fonts no)
+	(model "/home/none/Downloads/3d_models/MPL-05C-F 3D/MPL-05C(-F) 3D.stp"
+		(offset
+			(xyz 3 15 1.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
