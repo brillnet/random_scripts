@@ -1,0 +1,28 @@
+How can an AP find WLC and what is a Isotropic Antenna.
+
+AP can send broadcast out to look.
+AP can be primed with controllers.
+DHCP server can supply controllers.
+AP attempts to resolve CISCO-CAPWAP-CONTROLLER.
+If none of these are successful the AP resets itself.
+Antenna radiating energy lighting up basketball.
+
+Memory Palace - Bedroom - Table, Windows, Table to left of bed, Bed,Table to right of bed, Closet
+
+The AP robot is standing on the table, holding a giant megaphone and shouting into the room, sending out glowing blue signal waves. Plates on the table fly into the air from the soundwaves.
+
+The AP robot now peeks through the windows, and each pane has a label: “Primary,” “Secondary,” “Tertiary.” Behind each window, you see a different WLC robot waving back.
+
+On the small table sits a DHCP vending machine spitting out controller IP addresses on receipts. The AP robot grabs one like it's buying a snack.
+
+The AP robot climbs on the bed and opens a giant glowing book titled ‘DNS’. It waves a wand over the words "CISCO-CAPWAP-CONTROLLER", casting a magical blue beam toward the ceiling.
+
+On this table sits a giant red button labeled RESET. The AP robot slaps it in frustration and folds into a cube, tucking itself into a drawer.
+
+Open the closet doors and there is a tropical climate and robotic antenna mounted on a sleek silver pole. The antenna is perfectly tiny and floating at the center of the closet, suspended in mid-air like a museum display.
+
+Attached to it is a basketball, not for decoration, but actually glowing and pulsing. The antenna is the source—transmitting energy into the basketball, which then emits glowing spherical waves. 
+
+
+
+

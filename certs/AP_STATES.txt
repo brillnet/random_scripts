@@ -1,0 +1,24 @@
+States AP goes through
+AP boots
+WLC discovery
+CAPWAY tunnel
+WLC join
+Download Image
+Run State
+Reset
+
+Memory Palace - Main Room - Kitchen table, desk, chair, couch, coffee table, TV, bookcase.
+
+On the kitchen table, the robot AP is lying like a disassembled toy, and suddenly it springs to life—toaster coils pop up, LED eyes blink, and it launches upright like a jack-in-the-box.
+
+On your desk, the AP robot is standing, holding binoculars and scanning the horizon. Papers on the desk show “WANTED: WLC” posters, and there’s a spinning radar dish next to your laptop.
+
+Wrapped around the chair legs is a glowing neon tunnel, like a wormhole. The AP robot dives into it like a slide, heading toward a distant glowing WLC sign.
+
+The AP robot lands on the couch and gives the WLC (sitting like a big robot on one side of the couch) a huge spark-filled high five—they “click” together like magnets.
+
+On the coffee table, the WLC opens its chest and projects a glowing cube into the AP’s head like a movie download. The AP flashes and glows as it absorbs the data.
+
+On the TV screen, you now see the AP robot flying around like Iron Man, blasting out Wi-Fi beams and saving baby laptops from danger. It’s fully operational.
+
+On the bookcase, the AP presses a giant red reset button and folds itself into a tiny cube, sliding neatly between books titled “Boot,” “Discovery,” and “Join.”
