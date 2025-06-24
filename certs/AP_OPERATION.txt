@@ -44,20 +44,28 @@ It sucks in Wi-Fi packets, labels them, and tubes them to a laptop marked “Ana
 
 The garbage can is now a high-tech device labeled “ROGUE DETECTOR 3000.” The AP robot tosses in a device, and a red alert pops up:
 
-The AP robot writes “BRIDGE MODE ACTIVE” in the air with laser paint. Through Window 1, two APs hold opposite ends of a glowing data bridge.
-One says to the other: “In Bridge mode, we link worlds!”
+Tthe AP robot is dressed like a construction worker, wearing a yellow hard hat labeled “BRIDGE MODE”.
+He’s shouting across the yard to another AP robot visible through the window in the next building. They’re working together to build a glowing, floating rope bridge of radio waves that spans between their rooftops, right through the window frame.
+As they tighten the final cable, the first AP says,
+    “Let’s link up wirelessly—Bridge Mode online!”
 
-Above Window 2, a glowing banner reads “FLEX BRIDGE MODE.” A mesh AP, wearing a toolbelt, swings by on a web labeled “Mesh Link” and plugs a LAN cable into a switch labeled “Local.”
+Above Window 2, an acrobatic mesh AP robot perched on the windowsill, wearing a flexible bodysuit labeled “FLEXBRIDGE MODE.”
+It’s spinning a glowing rope net from the window to a faraway rooftop AP—this is its mesh link. But at the same time, it’s also plugged into a nearby smart toaster on the kitchen counter, using a glowing LAN cable to provide local switching.
+Above the window, a giant floating drone WLC watches over everything from above, sending down wireless command beams like puppet strings. The AP says:
+    “I’m in FlexBridge mode: connected up, switched local, and still obeying HQ!”
 
-On the counter, there's a glowing console labeled “SE-CONNECT Spectrum Station.” The AP robot wears a lab coat with “SE-Connect” on the back and waves a wand over the surface as waveforms rise.
+
+On the kitchen counter, the AP robot stands wearing a white lab coat with “SE-CONNECT” stitched on the back. The entire counter has transformed into a high-tech laboratory, glowing with purple and blue waveforms that ripple across the surface.
+The robot waves a triangular spectro-analyzer wand over the counter. Suddenly, it freezes, points at a smoky red distortion, and says:
+    “Interference detected—Bluetooth microwave spill at 2.4 GHz!”
 
 
 Summary
-Microwave – Local: Spa with “LOCAL mode” sign
-Sink – FlexConnect: Dual water flows, shirt says “FLEXCONNECT”
-Stove – Monitor: Silent listening with “MONITOR” hoodie
-Fridge – Sniffer: Vacuuming packets in “SNIFFER Lab”
-Garbage Can – Rogue Detector: High-tech trash scan “ROGUE DETECTOR 3000”
-Window 1 – Bridge: APs writing “BRIDGE MODE ACTIVE”
-Window 2 – Flex Bridge: Swinging mesh AP with “FLEX BRIDGE MODE”
-Counter – SE-Connect: Spectrum lab labeled “SE-CONNECT”
+Microwave – Local: Spa with “LOCAL mode” sign.
+Sink – FlexConnect: Dual water flows, shirt says “FLEXCONNECT”.
+Stove – Monitor: Silent listening with “MONITOR” hoodie.
+Fridge – Sniffer: Vacuuming packets in “SNIFFER Lab”.
+Garbage Can – Rogue Detector: High-tech trash scan “ROGUE DETECTOR 3000”.
+Window 1 – Two APs build a radio wave bridge across the window.
+Window 2 – AP in a bodysuit spins mesh link from window while also locally switching.
+Counter – Counter is a lab. AP robot scans colorful waveforms for RF interference.
