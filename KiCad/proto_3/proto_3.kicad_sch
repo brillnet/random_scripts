@@ -4100,7 +4100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "stuff:transformer_MPL-05SC-F"
+		(property "Footprint" "stuff:transformer_MPL-05SC-F_new"
 			(at 147.574 101.346 0)
 			(effects
 				(font
