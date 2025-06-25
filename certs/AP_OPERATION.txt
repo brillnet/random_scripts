@@ -44,7 +44,7 @@ It sucks in Wi-Fi packets, labels them, and tubes them to a laptop marked “Ana
 
 The garbage can is now a high-tech device labeled “ROGUE DETECTOR 3000.” The AP robot tosses in a device, and a red alert pops up:
 
-Tthe AP robot is dressed like a construction worker, wearing a yellow hard hat labeled “BRIDGE MODE”.
+The AP robot is dressed like a construction worker, wearing a yellow hard hat labeled “BRIDGE MODE”.
 He’s shouting across the yard to another AP robot visible through the window in the next building. They’re working together to build a glowing, floating rope bridge of radio waves that spans between their rooftops, right through the window frame.
 As they tighten the final cable, the first AP says,
     “Let’s link up wirelessly—Bridge Mode online!”
