@@ -1,0 +1,150 @@
+Memory Palace-Free Book Shelf, Bathroom 1, Meeting Room, Bathroom 2, Bench, Water fountain
+
+Access layer: Gives endpoints and users direct access to the network.
+■Distribution layer: Provides an aggregation point for the access layer and acts as a
+services and control boundary between the access layer and the core layer.
+■Core layer (also referred to as the backbone): Provides connections between
+distribution layers for large environments.
+
+SSO and NSF
+
+SSO is an internal router redundancy feature that allows a router with redundant RPs to
+checkpoint (synchronize or mirror) the router configuration, line card operation, and Layer 2
+protocol state information from the active RP to the standby RP
+
+NSF is an internal Layer 3 data forwarding plane redundancy feature that checkpoints and frequently updates the FIB from the active to the standby RP.
+
+■SSO and NSF with GR
+
+GR is deployed with SSO/NSF to protect the Layer 3 forwarding plane during an RP switchover
+For neighbor routers to continue forwarding traffic to the
+router undergoing an RP switchover, the neighbor routers need to support the GR routing
+protocol extensions.
+
+SSO/NSF-capable router: A router that has dual RPs and is configured to use SSO/
+NSF to preserve the FIB through an RP switchover. The routing protocol adjacencies
+are re-established upon completion of the RP switchover. An SSO/NSF-capable router
+is also GR-aware
+
+GR-aware router (also referred to as GR Helper, or the misnomer NSF-aware): A
+neighbor router that supports GR routing protocol extensions and that continues to
+forward traffic to the SSO/NSF-capable router during the RP switchover by preserving
+the routes and adjacency state. A GR-aware router does not require dual RPs, and it
+doesn’t need to be SSO/NSF capable.
+
+GR-unaware router: A neighbor router that doesn’t support GR routing protocol
+extensions and is not GR-aware
+
+■SSO and NSF with NSR
+
+NSR is an internal Cisco router feature that does not use routing protocol extensions to
+signal neighbor routers that an RP switchover has taken place. Instead, the active RP is
+responsible for constantly checkpointing all relevant routing control plane information to the standby RP, including routing adjacency and TCP sockets. During an RP switchover, the new
+RP uses the “checkpoint” state information to maintain the current routing adjacencies and
+recalculate the routing table without having to alert the neighbor router that a switchover has occurred.
+
+■SSO and NSF with NSR and GR
+
+A downside to NSR is that it increases the workload on the router due to the constant check-
+pointing of the routing and forwarding information to the standby RP. For scaled deploy-
+ments, it is recommended to use GR for neighbor routers that are GR-aware and NSR for
+peers that are GR-unaware.
+
+
+Free Book Shelf
+
+🔵 Bottom Shelf – Access Layer
+    A row of books titled “Edge Devices & Endpoints”
+    Little Wi-Fi AP figurines and Ethernet cables sticking out of the books
+    A toy laptop and VoIP phone sit here with a sign:
+
+        “Access Layer – Where clients connect”
+
+This shelf glows blue and has sticky notes labeled:
+    VLANs
+    Port security
+    Power over Ethernet
+🟡 Middle Shelf – Distribution Layer
+    This shelf holds books with titles like:
+        “Routing Decisions,” “Policy Enforcement,” and “Redundancy”
+    There’s a traffic cop figurine wearing a patch that says “ACL”
+    Two toy Layer 3 switches are connected with a lightning bolt cable
+A banner reads:
+    “Distribution Layer – Policy, path control, and redundancy”
+
+Shelf glows yellow
+🔴 Top Shelf – Core Layer
+    This shelf features big, industrial-looking books labeled:
+        “High-Speed Backbone,” “Fast Switching,” and “No Frills”
+    A toy data center switch with jet engines on it sits here
+    The shelf glows red and has arrows zooming left and right
+A bold header says:
+    “Core Layer – Fast, resilient backbone for data”
+
+Bathroom 1 - SSO and NSF
+
+Bathroom 1 has been transformed into a redundant control center with two router brains (Primary and Standby), side-by-side at a sleek command console.
+    The Primary Brain is actively managing the network—monitoring sessions, updating routing tables, and tracking state.
+    The Standby Brain is silently mirroring everything in real time, ready to take over instantly if needed.
+
+Above them, a glowing control panel displays:
+    🧠 SSO: Stateful Switchover – Real-time control plane state mirroring
+
+Suddenly, the Primary Brain’s console flickers and goes dark—a simulated failure. But instantly, the Standby Brain takes control of the console and continues operating without interruption. Nothing resets, and no sessions drop.
+
+Meanwhile, through clear pipes running along the wall, you can see glowing data packets (like tiny ships) continuing to flow smoothly without a hiccup.
+
+Next to the pipes, a label reads:
+	NSF: Non-Stop Forwarding – Data plane keeps forwarding traffic during control plane failover
+    🌊 NSF: Non-Stop Forwarding – Data plane keeps forwarding traffic during control plane failover
+    
+    
+Meeting Room - SSO and NSF with GR
+
+The door to the Meeting Room has a red carpet leading up to it. On the carpet stands a pair of identical router operator robots: a Primary and a Standby, both wearing jackets labeled “SSO Enabled” and “NSF Active.”
+
+They're giving a live network status briefing to a line of neighboring router agents standing politely behind velvet ropes. These neighbors hold signs that read:
+
+    🪪 OSPF
+    🌐 BGP
+    🔁 EIGRP
+
+Suddenly, the Primary robot flickers and shuts down—but instead of panicking, the Standby instantly steps up to the mic, continuing the session flawlessly—thanks to SSO.
+
+The neighboring routers don’t panic. Instead, a big countdown timer labeled “Graceful Restart Hold Timer” appears above their heads, and a glowing sign reads:
+
+    ⏳ “Graceful Restart in progress – Waiting for control plane recovery…”
+
+They continue forwarding traffic as if nothing happened, trusting that their routing peer will re-establish control before the timer expires.
+
+Bathroom 2 - SSO and NSF with NSR
+
+Bathroom 2 has been transformed into a high-availability control bunker, with walls covered in routing protocol holograms: OSPF, BGP, EIGRP.
+
+Inside, two identical routing CPUs—the Primary and the Standby—are seated at side-by-side terminals, both viewing the same real-time routing protocol logs, mirrored line-for-line.
+
+A big glowing display over them reads:
+    🧠 NSR Mode: Routing protocol state synced internally
+
+Suddenly, the Primary’s console fades out, but the Standby instantly takes over—no hiccup, no session resets, no timers triggered.
+
+A poster on the wall shows a crossed-out handshake with the text:
+    ❌ “No Graceful Restart Required!”
+
+Meanwhile, through the door’s frosted window, neighboring routers walk by unaware, because everything stayed up—adjacencies never dropped, routes remained valid.
+
+Bench - SSO + NSF + NSR + GR
+The Bench is now a VIP HA Command Center, made of brushed metal with glowing edges. Seated on the bench are:
+
+    A Primary Router Commander, and
+    A Standby Clone, mirroring his every move—SSO in action.
+
+Next to them, a stream of data packets flows across a glowing track in front of the bench—NSF at work, forwarding traffic without pause.
+
+Behind the bench, a holographic board shows live routing protocol updates being instantly duplicated to the Standby’s brain—NSR is active, preserving adjacencies internally.
+
+Standing just outside the Command Center, a group of neighboring routers in business suits are watching with approval. One holds a Graceful Restart badge, and a screen above flashes:
+    🫡 “GR Supported for Neighbor Compatibility – Adjacencies Preserved”
+
+On the bench’s armrest is a plaque that reads:
+    🛡️ “Resilient from Within – Polite to Peers”

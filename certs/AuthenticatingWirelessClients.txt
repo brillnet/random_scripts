@@ -1,6 +1,6 @@
 Authenticating Wireless Clients
 
-Memory Palace - Door way, TV, Bed,
+Memory Palace - Doorway, TV, Bed,
 
 Authenticating with pre-shared keys
 The doorway to the room has three glowing locks stacked vertically on the door frame:
