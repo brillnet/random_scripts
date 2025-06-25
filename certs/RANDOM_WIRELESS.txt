@@ -1,0 +1,73 @@
+Memory Palace - Doorway, Washer, Dryer, Shelves, Garbage Can, Garage Door
+
+Doorway
+RF range = shimmering field at the doorway
+Association = clipboard and polite request
+Authentication = ID badge scanned by AP
+IP address assignment = glowing envelope from a DHCP mailbox
+
+Washer
+Washer = investigation station
+WLC as detective robot = controller doing active search
+Magnifying glass with MAC = literal MAC address target
+Bubble icons = key client info: SSID, AP, IP, signal, auth
+
+Dryer
+The dryer door is now a round radar screen, spinning and pulsing with radio waves. On top of the dryer stands the WLC robot, dressed like an air traffic controller, wearing a headset and staring at a glowing dashboard clipboard titled:
+    📋 “AP Radio Summary – Status Report”
+
+On the screen are two dials labeled:
+    2.4 GHz 🔵 — “Channel 6, Power Level 3, Clients: 7”
+    5 GHz 🔴 — “Channel 149, Power Level 1, Clients: 14”
+   
+Shelves
+Each shelf holds a row of miniature AP figurines, each one labeled with a name tag like:
+
+    🟢 “AP-Kitchen”
+    🔵 “AP-Conference”
+    🔴 “AP-Garage”
+
+Above each AP, color-coded tags hang like luggage tags or file labels:
+    📘 Policy Tag → “Corp-WPA2”
+    🟡 RF Tag → “High Power / 5GHz Prefer
+    
+    
+Garbage Can
+The garbage can lid is wide open, and inside it, a Wi-Fi signal appears as a golden microphone mounted to a pole, clearly emitting crisp audio in the form of glowing Wi-Fi signal waves.
+
+But swirling all around inside the garbage can is a chaotic mess of:
+    💨 Buzzing static clouds labeled “Interference”
+    📻 Noisy radio toys blaring random signals
+    🔊 A shouting toddler with a megaphone yelling "BLEEP BEEP BLAAHH"
+
+Standing beside the garbage can is a Wi-Fi technician robot with a measuring gauge, labeled:
+    📊 SNR Meter: Signal Power / Noise Level
+
+He adjusts a dial that increases the golden mic’s signal, making it shine brighter, while muting the background junk. As he dials it in, a readout flashes:
+    ✅ “SNR = 30 dB – Excellent!”
+    ⚠️ “SNR = 10 dB – Struggling!”
+
+He says:
+    “When signal is strong and garbage noise is low, we get clean communication. When noise rises, it’s like yelling over a blender!”
+    
+Garage door
+A glowing Wi-Fi highway is painted across the garage door—labeled "Channel 36."
+Tiny data cars are driving across it. The more cars on the road, the more congested it becomes.
+    On one side, a green lane has just a few cars zipping smoothly:
+        “Channel Utilization: 10% – Smooth Flow!”
+    On the other side, it’s a red traffic jam, filled with blinking cars and honking AP robots:
+        “Channel Utilization: 90% – Congestion Detected!”
+
+A traffic cop robot (WLC) is holding up a sign:
+    “Too much chatter! Pick a less crowded channel!”
+
+🔊 Right Side – Transmit Power
+Mounted to the door is a giant volume knob labeled “Transmit Power,” with markings from 1 (low) to 8 (high).
+
+A glowing AP antenna above the dial is blasting waves.
+    At level 2, the waves are soft and contained:
+        “Low Power – Small Coverage, Low Interference”
+    At level 8, the waves are massive and bouncing off all the walls—and even hitting a poor AP hiding behind a shelf:
+        “High Power – More Coverage, but More Interference!”
+A sign reads:
+    “More isn’t always better—transmit power must be tuned!”

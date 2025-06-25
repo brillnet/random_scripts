@@ -1,7 +1,7 @@
 Memory Palace - Sink, Mirror, Toilet, Shower, Towel Hanger
 
 At the sink, the AP robot is washing its hands, but it's constantly stepping from one rug to another right beneath it—each rug marked with a different AP name, but all connected to the same subnet.
-As it steps, nothing else changes—no disruption, no new IP address. A big sign on the faucet reads:
+As it steps, nothing else changes—no disruption, no new IP address. A big sign on the faucet reads: “Layer 2 Roaming – Same subnet, same IP, smooth handoff!”
 
 
 The mirror becomes a portal to a different bathroom, and every time the AP robot steps into it, it finds itself in a completely different subnet—with a glowing new IP address popping up above its head.
@@ -13,9 +13,10 @@ Whenever one duck leaves and another enters, they give each other secret handsha
 
 The shower becomes a WiFi signal chamber, with a single AP mounted on the wall shooting a weak laser to a rubber duck on the drain.
 The AP says, “I know it’s nearby, but I can’t tell where exactly.”
-Then suddenly, two more APs appear around the tub, triangulating the duck's location like GPS satellites. The duck yells:
+Then suddenly, two more APs appear around the tub, triangulating the duck's location like GPS satellites. The duck yells: “Now they can pinpoint me—thanks to 3 APs using RSS!”
 
 Hanging on each towel is a unique RF signature print, like a heat map. The AP robot walks by scanning them with a radio magnifying glass, comparing the real-time signal map to a stored digital fingerprint of the environment.
+“Location confirmed by RF Fingerprint!”
 
 Recap
 Sink	Layer 2 Roaming	Stepping between rugs, same water = same subnet
