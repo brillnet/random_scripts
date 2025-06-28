@@ -88,15 +88,16 @@ Bathroom 1 has been transformed into a redundant control center with two router 
     The Standby Brain is silently mirroring everything in real time, ready to take over instantly if needed.
 
 Above them, a glowing control panel displays:
-    🧠 SSO: Stateful Switchover – Real-time control plane state mirroring
+*    🧠 SSO: Stateful Switchover – Real-time control plane state mirroring
+	(Synchronized Squirrels Operate)
 
 Suddenly, the Primary Brain’s console flickers and goes dark—a simulated failure. But instantly, the Standby Brain takes control of the console and continues operating without interruption. Nothing resets, and no sessions drop.
 
 Meanwhile, through clear pipes running along the wall, you can see glowing data packets (like tiny ships) continuing to flow smoothly without a hiccup.
 
 Next to the pipes, a label reads:
-	NSF: Non-Stop Forwarding – Data plane keeps forwarding traffic during control plane failover
-    🌊 NSF: Non-Stop Forwarding – Data plane keeps forwarding traffic during control plane failover
+*    🌊 NSF: Non-Stop Forwarding – Data plane keeps forwarding traffic during control plane failover
+	(Nosey Shark Forwards)
     
     
 Meeting Room - SSO and NSF with GR
@@ -113,7 +114,8 @@ Suddenly, the Primary robot flickers and shuts down—but instead of panicking, 
 
 The neighboring routers don’t panic. Instead, a big countdown timer labeled “Graceful Restart Hold Timer” appears above their heads, and a glowing sign reads:
 
-    ⏳ “Graceful Restart in progress – Waiting for control plane recovery…”
+*    ⏳ “Graceful Restart in progress – Waiting for control plane recovery…”
+	Giraffe resting
 
 They continue forwarding traffic as if nothing happened, trusting that their routing peer will re-establish control before the timer expires.
 
@@ -125,6 +127,7 @@ Inside, two identical routing CPUs—the Primary and the Standby—are seated at
 
 A big glowing display over them reads:
     🧠 NSR Mode: Routing protocol state synced internally
+	Nesting Swans replicating.
 
 Suddenly, the Primary’s console fades out, but the Standby instantly takes over—no hiccup, no session resets, no timers triggered.
 
