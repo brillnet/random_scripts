@@ -1,0 +1,113 @@
+SD Access
+
+Network Automation
+Network assurance and analytics - prediction of network and security events.
+Host mobility - mobility for wired and wireless clients.
+Identity services - provides contextual info required for users and
+devices connecting to the network.
+Policy enforcement - access is granted based on identity instead of IP.
+Secure segmentation - segmentation based on guest, corporate, facilites and IoT
+Network virtualization - leverage physical infrastructure supports many VRFs
+
+Management Layer - Cisco DNA Center
+Controller Layer - DNA Center - Network Control Platform, Network Data Platform
+
+Underlay Network - Physical network.
+	Manual Underlay - Created manually without Cisco DNA Center.
+	Automated Underlay - Create and managed by Cisco DNA Center.
+
+Overlay Network - SD-Access Fabric
+	Made up of 
+		Control Plane - LISP - based on endpoint identifier and routing locator.
+		Remote designations on routers is stored in remote mapping database.
+		Distributed Anycast Gateway, VN Extranet, Fabric Wireless
+		called map server
+		
+		Data Plane - VXLAN
+		
+		Policy Plane - Cisco TrustSec - tags created and assigned to authenticated
+		groups of users or end devices. Provide support for VRFs, Network address
+		independent group based policies.
+	
+	* Mem palace
+	SD-Access Fabric Roles
+		Control plane node - Provides mapping. EID to RLOC
+		Fabric border node - Connect external layer3 to SDA fabric
+			Internal border - connects to known areas of organization
+			Default border - connects to unknown areas outside organization
+			Internal + default border - connects to transit areas of the company.
+		Fabric edge node - Connects APs and wireless endpoints to SDA fabric.
+		Fabric WLAN controller - connects fabric devices and APs and wireless endpoints to the SDA fabric.
+		Intermediate nodes - underlay services. do not provide any SD-Access fabric role.
+		
+		
+		
+Memory Palace - Sliding doors, Front Desk, Bookshelves (to the left), Computer table,
+Computer tables near circulation desk, Computers, Circulation Desk, Small Desk 1, Small Desk 2,
+Small Desk3, Study room closest to window, second study room, third study room, table closest to study room,
+table closest to window, second table closest to window, table closest to front desk
+
+Sliding Doors 
+"Sliding doors open to parallel VRF tunnels, separate routing maps."
+
+Front desk
+Clerks assign rooms by pool, each has a switch.
+
+Bookshelves
+Books shelved by policy—same tag, same rule set.
+
+Computer table
+Each desk has same gateway—login works everywhere, instantly.
+
+Left off on Controller layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Front Desk (SDAccess - Components)
+Controller Layer - Conductor robot syncing 4 glowing management subsystems
+Cisco NCP - Network Construction Platform
+Cisco NDP - Network Detective Platform
+Cisco ISE - Identity Services Engine
+
+Book Shelf to left. (SDAccess - Nodes)
+Control Plane Node	Wizard wearing "controller hat" mapping EID(Endpoint Identity Descriptor) to RLOC (Routing Locator of Connection) in glowing atlas
+Fabric Border Node	Gatekeeper robot next to gigantic BORDER sign connecting outside L3 world to fabric
+Fabric Edge Node	APs and endpoints boarding a glowing “Edge Node” bus drive off edge of cliff.
+Fabric WLAN Controller	Conductor orchestrating APs and fabric switches
+Intermediate Nodes	Stone tunnels forwarding data quietly—underlay only, no fabric intelligence
+
+
+SD-WAN Edge Device	A robot edge courier truck rolling on WAN cable wheels, delivering traffic smartly 
+between branches
+vManage	A glowing touchscreen labeled “vManage” lets you manage policies, devices, and templates visually
+vSmart Controller	A glowing brain server labeled “Smart Controller” distributes routes and policies to all 
+edge devices
+vBond Orchestrator	A robot bond orchestrator checking digital passports to securely onboard edge devices into the network
+vAnalytics	A floating AI named Analytics projecting trend lines and insights above the console
+
+Re-do 
+
+
+
+
