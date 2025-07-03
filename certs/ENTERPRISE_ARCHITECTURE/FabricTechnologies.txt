@@ -47,19 +47,32 @@ Computer tables near circulation desk, Computers, Circulation Desk, Small Desk 1
 Small Desk3, Study room closest to window, second study room, third study room, table closest to study room,
 table closest to window, second table closest to window, table closest to front desk
 
-Sliding Doors 
-"Sliding doors open to parallel VRF tunnels, separate routing maps."
+Sliding Doors,Front Desk,Bookshelves (to the left),Computer Table,Computer Tables Near Circulation Desk,Computers,
+Circulation Desk,Small Desk 1,Small Desk 2,Small Desk 3,Study Room Closest to Window
 
-Front desk
-Clerks assign rooms by pool, each has a switch.
+Sliding Doors - Virtual Network
+Sliding doors open to Virtual Network tunnels, separate routing maps.
 
-Bookshelves
-Books shelved by policy—same tag, same rule set.
+Front desk - Host Pool
+Front desk sorts guests into Host Pools with SVIs.
 
-Computer table
+Bookshelves - Scalable group
+Books grouped by tag—each shelf a Scalable Group.
+
+Computer table - Anycast gateway
 Each desk has same gateway—login works everywhere, instantly.
 
-Left off on Controller layer
+Computers near circulation desk - Controller Layer
+Controller Layer commands management systems from central control table.
+
+Computers - Cisco Network Control Platform provides underlay and fabric (Control and Platform)
+automation
+Cisco Network Control Platform robot builds fabric, wiring itself.
+
+Circulation Desk - Cisco Network Data Platform Data Collection Analyzes and correlates events. (Data and Platform)
+Cisco Network Data Platform scans traffic—collects, spots patterns.
+
+
 
 
 
