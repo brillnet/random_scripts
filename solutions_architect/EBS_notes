@@ -1,6 +1,8 @@
 EBS
 
+
 Root volumes are deleted on termination however you can change this behavior.
+
 
 EBS volumes are automatically replicated with a single AZ to protect
 against hardware failures.
