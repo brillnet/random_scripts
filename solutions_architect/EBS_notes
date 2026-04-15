@@ -1,0 +1,52 @@
+EBS
+
+
+Root volumes are deleted on termination however you can change this behavior.
+
+
+EBS volumes are automatically replicated with a single AZ to protect
+against hardware failures.
+
+EBS Volume Types
+
+-gp2, gp3 - workloads that require a good balance of performance
+and cost effectiveness.
+
+-io1, io2 - provisioned iops - EC2 - hosted relational databases
+with high IO demands.
+
+-magnetic - Data archiving and backups. Any large volume
+of infrequently accessed data that need to be stored
+cost effectively for long term retention.
+
+(Also EBS Multi Attached volumes. Provisioned IOPS EBS volumes
+that can attach up to 16 EC2 instances at once. 
+ex) shared Filesystems ex) Distributed DBS)
+
+Encryption
+
+- very little perforamnce impact
+
+- The following data types are encypted
+    -Data at rest in the volume.
+    -Data moving between the volume and EC2
+    -Snapshots created from the volume.
+
+-If volume isn't encypted when you create
+it. You cannot encrypt it after the fact.
+
+Snapshots
+-First one takes the longest. Future ones
+don't take that long.
+
+Achieve - allows you to store snapshots
+for lower costs if you not need fast
+retrieval
+    -Recycle bin - Restores accidently deleted
+    EBS snapshots
+
+- IOPS - measures # of read and write operations
+per second
+
+- Throughput - Measures # of bitsread or written
+per second (MB/s)
