@@ -1,0 +1,10 @@
+Types
+
+Cluster
+Spread - no hardware being shared. recommended for critical apps where uptime is vital.
+Partition - spread instances across logical partitions. Each partition has its own set
+of racks. example workloads) hadoop,cassandra,kafka
+
+You can add a stopped instance to a placement group.
+Good practice: homogenous instances in cluster placement groups.
+You cannot merge placement groups.
