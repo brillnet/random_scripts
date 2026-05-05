@@ -1,0 +1,45 @@
+On-demand - pay for compute by the hour
+or section.(minimum of 60 seconds)
+
+Baseline - most expensive by the
+hour.
+
+EC2 Instanc on demand pricing can
+be discounted up to 72% as long
+as 1 to 3 year commitment is made
+by the user. Perfect for instances that you always have to have up.
+
+You can always buy and sell reserved instances off of the
+AWS marketplace.
+(Reserved instances are currently being phased out.)
+
+You can also reserver on demand
+capacity even if you are not using. Essentially saying: 'hey
+I need up to this much compute
+available all times.'
+example)business critical workloads, apps requiring capacity short and long term.
+
+Savings Plan Types
+Compute Savings Plan
+    - Offers most flexibility
+      between instance types.
+
+    - Prices can be 66% off compared to on demand prices.
+
+    - Include lambda and fargate
+
+EC2 Instance Savings Plans
+
+    - Commited to a specific instance family in a chosen AWS region
+
+    - Provides the most savings, offers up to 72% off on demand prices.
+
+    - The most savings but you
+    won't be getting as much flexibiltiy as the compute
+    savings plan.
+
+SageMaker Savings Plans
+
+    -Specific to the sagemaker
+    services. Provides upt o 64%
+    off on-demand pricing
