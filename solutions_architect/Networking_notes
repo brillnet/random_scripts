@@ -1,0 +1,15 @@
+NIC Types
+
+ENI - basic networking
+EN - single route io virtulization/high performance.
+    SR-IOV - allows single network device to present itself
+    as multiple virtual devices to the operating system
+    and hypervisor.
+    Higher io while minimizing CPU utilization.
+    Supports up to 100Gbps
+
+    Intel VF interfaces support up to 10Gbps
+
+Elastic Fabric Adapter (EFA) - HPC and Machine learning apps
+    - Offers OS-Bypass - HPC and ML can communicate directly with the network interface
+    hardware.
