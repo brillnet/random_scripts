@@ -1,0 +1,27 @@
+Windows Filesystem that can run on AWS.
+    -NTFS
+    -SMB
+
+Easily can move windows based applications that require
+file storage up to AWS.
+
+Allows for up to 10GB+/second
+Scales to 100 of PBs
+Can span across multiple AZs and can back up to S3 daily.
+
+FSx for Lustre
+-Useful for High performance and Machine learning workloads.
+-Supports millions of IOPs and very little latency.
+-Processes datasets at 100s of GBs per second.
+-S3 can be used as the filesystem.
+
+FsX for NetApp OnTAP
+AWS Managed NetApp ONTAP service
+Storage can shrink and grow as needed
+Supports: NFS, iSCSI, NVMe-over-TCP
+
+FsX for OpenZFS
+Used for migration of ZFS filesystems to AWS.
+Supports industry standard NFS protocols.
+Supports Multi-AZ
+backups are stored on s3
