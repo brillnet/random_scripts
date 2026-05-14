@@ -1,0 +1,50 @@
+Managed NFS that can be mounted by multiple EC2 instances
+at once.
+
+Instances can span across multiple AZs.
+
+Used NFSv4.1.
+Only compatible with linux.
+Can enable encryption at rest with it.
+Scaled automatically.
+More expensive than EBS.
+
+Security groups are created to control access to
+these EFS resources.
+
+Use Cases
+Content Management
+Web Servers where you have a simple folder structure.
+
+Performance
+Can support thousands of connections.
+20 Gbps of throughput for networking requirements.
+Can scale to petabytes in size.
+
+    General Purpose
+        Web Servers and Content Management Systems
+        Max I/O meant for highly parallaized workloads.
+
+    Throughput Modes
+        Elastic - when you aren't sure about throughput requirements. Spikey.
+        Provisioned - If you already know the performance requirements.
+        Bursting - When you want the amount of throughput to scale with amount of storage.
+
+    Storage Class Options
+        Standard - High Speed SSDs. Most expensive.
+        Infrequent Access - Cost optimized storage. Can be used for lower cost
+        and high performance. 
+        Archieve - Data is the only access a few times a year. Most cost
+        efficient.
+
+    File system types
+        Regional - Spread across multiple availability zones.
+    
+        One zone - Only available on one zone. Useful for non-critcal
+        workloads.
+    
+        Each filesystem type can deliever 11-9s inside of each ones
+        respected AZ.
+
+    **You can use lifecycle policies to move storage into different
+    storage classes.
