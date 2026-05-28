@@ -1,0 +1,9 @@
+Types of S3 Policies
+    - Identity Based - Attached to IAM principals
+    to control access to AWS resources and services.
+
+    - Resource Based - Attached to AWS resources
+    to control permissions and access
+
+    arn:aws:s3:::pluralsigh-bucket <- Bucket level permissions for resource.
+    arn:aws:s3:::pluralsight-bucket/* <- Object level permissions for the resource.

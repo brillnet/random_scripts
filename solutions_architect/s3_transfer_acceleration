@@ -1,0 +1,31 @@
+# Feature that speeds up uploads and downloads to s3 buckets.
+
+Use Cases
+    - Upload to central bucket from locations spread out
+    across the world.
+    
+    - Transfering TBs of data on regular schedule from
+    all around the world.
+
+    - If not able to use all avialble bandwidth to the
+    internet.
+
+Requestor Pays
+
+    - Requestor pays can be setup to offload the cost
+    of storage and transfer to the AWS IAM user.
+
+    - This is setup on the bucket.
+
+    - Requests that are made must include the
+    x-amz-request-payer-header or the RequestPayer
+    can be a parameter in the request.
+
+    Hosting static websites in s3
+    -Websites can only run client side scripts,
+    not server side.
+    -Websites that are dynamic that require 
+    database connections cannot be hosted in
+    s3
+    -S3 will scale automatically to accomodate
+    demand.

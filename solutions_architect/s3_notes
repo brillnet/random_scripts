@@ -1,0 +1,89 @@
+Highly scalable and secure object storage.
+Regional
+Store unlimited amount of data and objects.
+A single object can be up to 5TB in size.
+use cases: media hosting, data lakes, static websites.
+
+S3 supports multipart uploads. This allows users
+to upload large objects as broken down smaller objects.
+    Use cases: 
+        Very large files
+        Unstable network connection.
+
+Storage Classes
+    Standard
+    Express One Zone - High performance single zone
+    offering single digit milisecond data access.
+    Infrequently accessed data
+        Standard IA - Stores data redundantly across multiple
+        AZs and could require rapid access when needed.
+        
+        Single AZ - Stores objects redundantly in one AZ.
+        less resilient and cheaper.
+
+        S3 Glacier - Long term data that is rarely accessed.
+        However it does not to be accessed in can be accessed
+        in milliseconds.
+            Minimum storage duration - 90 days
+
+        S3 Glacier Flexible Retrieval - Data that needs to
+        be retrieved in minutes.
+            Minimum storage duration - 90 days
+
+        S3 Deep Archieve - Data that rarely needs to be accessed.
+        Can take 48 hours to get it.
+            Minimum storage duration - 180 days
+        
+        Storage classes for unknown access patterns
+            Moves data to the most cost effective tier with no
+            performance impacts.
+
+            Storage classes for unknown access
+                Frequent Access
+                Infrequent Access - have not be accessed in 30
+                consecutive days.
+                Archieve Instance Access - objects that have not
+                been accessed in 90 consecutive days.
+
+S3 Object versioning
+    - Unversioned(default)
+    - Versioning enabled (you cannot disable this on a bucket when it is on)
+
+S3 Lifecycle Rule Example
+    - Can transfer from S3 standard to S3 infrequent after 30 days.
+    - Expire objects in bucket after 366 days.
+    - Transition from non-current objects to standard IA
+    - Transition compliance documents to glacier deep archieve after 365 days.
+    - Expire developer data 30 days after it was created.
+
+S3 Replication
+    -You replicate from one bucket to another
+    -Versioning must be on in order to do this.
+    Concepts
+        -Cross Region Replication
+        -Same-Region Replication
+        -Buckets dont need to be in the same account
+        -IAM policy needs to be setup in order for
+        replication to happen.
+
+Better performance
+    -If reads are spread out amongst different prefixes.
+        - Example four prefixes
+            /folder/subfolder1
+            /folder2/subfolder2
+            /folder3
+            /folder4/subfolder4
+
+    Byte Range Fetch
+        Fetching a large object out of S3 bucket the 
+        object can split into byte ranges that correspond
+        to sections of the object.
+        Much better delievery performance when doing this.
+
+s3 Object Lock
+    - Can store objects using a Write once read many model. (WORM)
+    This prevents objects from being deleted or modified for 
+    a fixed amount of time.
+        Lock governance mode
+            Average users cannot overwrite or delete and object version
+            or change the lock settings.
