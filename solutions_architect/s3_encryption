@@ -1,0 +1,39 @@
+SSE-S3 - s3 managed keys using AES-256 - Data at rest
+    - Server-side encryption - used AWS managed keys
+    - Uses AES-256 encryption
+    - Default setting for all new S3 buckets
+    - header is set to "x-amz-server-side-encryption:AES256"
+
+SSE-KMS - AWS key management service
+    - Encryption as rest
+    - header is set to "x-amz-server-side-encryption:aws:kms"
+    - KMS keys must be in same region as bucket.
+    - There are additional charges for using AWS KMS keys
+
+    - Bucket level key can be used and to reduce costs up to 99%
+        - Using them will decrease the number of requests made to
+        the AWS KMS service.
+    - AWS will generate a short-lived bucket level key from AWS KMS
+    - This short-lived key is stored in S3 for a period of time.
+        From short-lived key data keys are created and are used for
+        encryption
+
+
+SSE-C - Customer provided keys
+    - Encryption as rest
+    - You manage your own keys
+    - Key is included in every single http request made
+    to the bucket.
+    Headers used: 
+        x-amz-server-side-encryption-customer-agorithm
+        x-amz-server-side-encryption-customer-key
+        x-amz-server-side-encryption-customer-key-MD5
+
+Client Side Encryption
+    You manage your owns keys.
+
+    Client encrypts data before sending to s3 and 
+    then it is decrypted after it gets to s3.
+
+    You leverage the amazon s3 encryption client
+    to make the process easier.
