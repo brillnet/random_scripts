@@ -1,0 +1,44 @@
+Top-Level Domains
+    ex) .com, .net, etc
+
+Second-Level Domains
+    ex) www.google.com - 2nd level domain would be google.
+        www.yahoo.com  - 2nd level domain would be yahoo.
+
+Subdomain
+    ex) www.google.com - Subdomain would be www
+        www.whatever.com - Subdomain would be www
+
+Route53 is always 100% available.
+    Services
+        Domain Registrations
+
+            Authority that can assign domains under a top
+            level domain. (There domains are registered with InterNIC)
+        
+        DNS Routing
+        Health Checks
+
+    Hosted Zones - containers for records 
+    that determine how traffic is routed
+    for domains and subdomains
+
+        Public Hosted Zone - records for routing traffic
+        on the public internet.
+
+        Private Hosted Zones - Records for routing
+        traffic within a VPC.6
+
+Components of record
+    Domain and Subdomain
+    Record Type: A, CNAME, MX, NS, SOA
+        A Records - Routing traffic to IPv4 address
+        AAAA Records - Routing to IPv6 address
+        NS Record - Identifies the name servers for the hosted zone
+        Alias - Record that routes traffic to specific AWS resources
+
+    IP or hostname traffic is being routed to.
+    Policy associated with the record
+    TTL value - Number of seconds to cache values
+
+    
