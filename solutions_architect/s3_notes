@@ -87,3 +87,25 @@ s3 Object Lock
         Lock governance mode
             Average users cannot overwrite or delete and object version
             or change the lock settings.
+            
+            Can give users ability to alter retention settings of the
+            s3 object.
+
+s3 object lock compliance mode
+    Protect object cannot be overwritten or deleted by any user.
+    Object retention policy cannot be changed by changed by user.
+
+Retention Periods
+    Protects object version for a fixed amount of time.
+    Timestamp stored in object metadata indicates when retention
+    period will expire.
+
+
+Misc
+Buckets are private by default.
+S3 objects can be made public by using ACLs
+Bucket ACLs - an XML policy that manages access to bucket.
+Bucket Policy - whole bucket can be made public using
+bucket policy.
+Bucket policy is favor over individual ACLs.
+S3 access points are used to simplify access to s3 data.
