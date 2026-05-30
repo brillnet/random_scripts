@@ -1,0 +1,44 @@
+#  Allows you to perform single operation 
+#  on large set of s3 objects
+
+Large Scale - Large set of s3 objects
+Jobs are executed on the objects.
+
+Use Cases
+    - Copy or move large amount of data between s3 buckets
+    or different storage classes
+
+    - Change tags for large amounts of objects.
+
+    - Combine with other AWS services to tranform data.
+
+    - Encrypt large amount s3 objects.
+
+#  S3 Select - Can use SQL like queries on CSVs and JSON
+#  data in buckets.
+
+example) select s.name from S3Object s where s.age > 25
+
+# S3 event notifications
+Can recieved notifications were certain events happen in
+an S3 bucket.
+    -New objects are created.
+    -Objects are deleted.
+    -Replication event
+    -Restored objects
+    -Lifecycle events
+    -Object tagging event
+
+Events can be sent to
+    -SNS topics
+    -SQS queues
+    -AWS Lambda functions
+    -Amazon EventBridge buses
+
+Use Cases
+    -Image is uploaded to S3 bucket and lambda function
+    is triggered that resizes it and pushes it to another
+    bucket.
+    -Compliance - Object is uploaded and a workflow is
+    triggered to analyze the object to confirm that the
+    data uploaded isn't sensitive.
