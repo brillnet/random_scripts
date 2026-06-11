@@ -1,0 +1,4 @@
+AWS allows you to connect you on-premise
+DNS servers with AWS infrastructure very easily.
+    - Inbound endpoints are used for queries going into your VPC
+    - Outbound endpoints are used for queries leaving your VPC.
