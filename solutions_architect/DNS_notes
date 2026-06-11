@@ -36,6 +36,8 @@ Components of record
         AAAA Records - Routing to IPv6 address
         NS Record - Identifies the name servers for the hosted zone
         Alias - Record that routes traffic to specific AWS resources
+        cname 
+            - maps one domain to another www.test.com -> www.whatever.com
 
     IP or hostname traffic is being routed to.
     Policy associated with the record

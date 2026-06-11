@@ -1,0 +1,17 @@
+Dedicated Hosts - dedicated physical
+host.
+ex) Bring your own license
+
+Dedicated Instances - Instances will not run on hardware that is shared with other AWS accounts.
+
+Spot Instances - uses spare EC2
+capacity. Available for much less
+than on demand price. (up to 90% off) 
+Can be shutdown at any time. AWS
+will attempt to give you a two
+minute warning before the instance is reclaimed.
+
+Spot capacity pools - Select pool that has best capacity for
+the spot instance.
+Instances will be distributed across all spot capacity pools.
+-Great for workloads with flexible start and end times.

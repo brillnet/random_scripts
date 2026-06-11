@@ -1,0 +1,7 @@
+Compute Optimizer
+Works with: 
+    EC2 Instances
+    EBS Volumes
+    Elastic Container Store (ECS)
+    AWS Lambda Functions
+    Amazon Relation Database Service
